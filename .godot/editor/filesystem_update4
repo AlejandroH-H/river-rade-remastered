@@ -1,3 +1,4 @@
-res://Chars&World/character_body_2d.tscn
-res://Scripts/raiderMovement.gd
 res://Chars&World/Level.tscn
+res://Chars&World/character_body_2d.tscn
+res://Scenes/bullet.gd
+res://Scripts/raiderMovement.gd

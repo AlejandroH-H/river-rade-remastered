@@ -23,6 +23,23 @@ tracks/0/keys = {
 "values": [0, 1, 2]
 }
 
+[sub_resource type="Animation" id="Animation_7x1n0"]
+resource_name = "Left"
+length = 1.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.633333, 0.933333, 1.23333, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [9, 10, 11, 12, 13, 14]
+}
+
 [sub_resource type="Animation" id="Animation_f6kfu"]
 length = 0.001
 tracks/0/type = "value"
@@ -55,23 +72,6 @@ tracks/0/keys = {
 "values": [3, 4, 5, 6, 7, 8]
 }
 
-[sub_resource type="Animation" id="Animation_7x1n0"]
-resource_name = "Left"
-length = 1.8
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.633333, 0.933333, 1.23333, 1.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [9, 10, 11, 12, 13, 14]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dkvu8"]
 _data = {
 &"Idle": SubResource("Animation_njlli"),
@@ -101,3 +101,10 @@ speed_scale = 1.5
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.5, 1.5)
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2(0, -36)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
