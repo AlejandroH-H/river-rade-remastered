@@ -1,1 +1,5 @@
 res://Chars&World/Level.tscn
+res://Chars&World/character_body_2d.tscn
+res://Scenes/bullet.tscn
+res://Chars&World/enemy_boat.tscn
+res://Scripts/hitbox.gd
