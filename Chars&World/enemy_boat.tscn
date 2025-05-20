@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3 uid="uid://ddqakknshcler"]
+
+[ext_resource type="Script" uid="uid://bk62pskjfu0uj" path="res://Scripts/enemy_boat_anim.gd" id="1_hlq4p"]
+[ext_resource type="Texture2D" uid="uid://dq5jxv6w5snye" path="res://Textures/Enemies/PNG/Boat1_water_animation_color1/Boat1_water_spritesheet.png" id="1_nfp0i"]
+[ext_resource type="Script" uid="uid://bdjera6ic6kia" path="res://Scripts/hitbox.gd" id="2_hlq4p"]
+
+[sub_resource type="Animation" id="Animation_hlq4p"]
+resource_name = "Idle"
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.366667, 0.7, 1.06667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_2seb3"]
+length = 0.001
+
+[sub_resource type="Animation" id="Animation_xxrmw"]
+resource_name = "Death"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xxrmw"]
+_data = {
+&"Death": SubResource("Animation_xxrmw"),
+&"Idle": SubResource("Animation_hlq4p"),
+&"RESET": SubResource("Animation_2seb3")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2seb3"]
+radius = 15.0
+height = 70.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hlq4p"]
+size = Vector2(60.25, 30.875)
+
+[node name="Enemy_Boat" type="CharacterBody2D"]
+script = ExtResource("1_hlq4p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-9, 1)
+rotation = -1.5708
+scale = Vector2(0.84375, 0.734375)
+texture = ExtResource("1_nfp0i")
+hframes = 2
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_xxrmw")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-13, 1)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_2seb3")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("2_hlq4p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-10.125, 3.4375)
+shape = SubResource("RectangleShape2D_hlq4p")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

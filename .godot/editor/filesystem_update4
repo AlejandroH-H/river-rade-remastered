@@ -1,1 +1,9 @@
 res://Chars&World/Level.tscn
+res://Chars&World/character_body_2d.tscn
+res://Scenes/bullet.tscn
+res://Scripts/hitbox.gd
+res://Scenes/bullet.gd
+res://Chars&World/enemy_boat.tscn
+res://Scripts/enemy_boat_anim.gd
+res://Scripts/raiderMovement.gd
+res://Scripts/prueba.gd
