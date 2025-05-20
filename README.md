@@ -8,7 +8,7 @@ Proyecto totalmente enfocado a la educación, en este caso, se trata de una rema
 
 En este caso, la remasterización se realiza en el motor gráfico de **Godot**, utilizando la creación y anidación de modos para modelar el juego, con texturas más iterativas y con una jugabilidad mucho más estable, conservando todos los aspectos que caracterizan al juego y el modelo de niveles.
 
-![New_River-Rade](/assets/public/img/newRiver.xcf "New_River-Rade")
+![New_River-Rade](/assets/public/img/NewRiver.jpg "New_River-Rade")
 
 Bajo este material de apoyo, nos estamos basando para recrear las mecánicas:
 
