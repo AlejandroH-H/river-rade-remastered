@@ -1,35 +1,37 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1747708813
+::res://::1747770882
 icon.svg::CompressedTexture2D/CompressedTexture2D::7482147990888647328::1747174769::1747504627::1::::<><><>0<>0<>ec382b76b68e215288a479bce15452a1<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-probando.txt::TextFile::-1::1747176982::0::1::::<><><>0<>0<><>::
-README.md::TextFile::-1::1747708760::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1747770601::0::1::::<><><>0<>0<><>::
 ::res://assets/::1747708760
 ::res://assets/public/::1747708760
-::res://assets/public/img/::1747708844
-clasicRiver.jpeg::CompressedTexture2D::4712082678700067698::1747708760::1747708844::1::::<><><>0<>0<>6ccb5386a9c04aede651d20308f2fe1c<>res://.godot/imported/clasicRiver.jpeg-e426724252a48c52a9e899329684586e.ctex::
-::res://Chars&World/::1747709666
-character_body_2d.tscn::PackedScene::2949868873588061193::1747709666::0::1::::<><><>0<>0<><>::uid://jg4ikih6byvs::::res://Textures/Planes/main_ship-sheet.png<>uid://blfxxut2subhy::::res://Scripts/raiderMovement.gd
-Level.tscn::PackedScene::2119733693521294400::1747709665::0::1::::<><><>0<>0<><>::uid://543ww3us3avd::::res://TileMaps/tileSetGrass/preview.png<>uid://bia656h0sjnan::::res://Chars&World/character_body_2d.tscn<>uid://b8nqtjjlsoukw::::res://TileMaps/tileSetWall/galletcity.png<>uid://bdjera6ic6kia::::res://Scripts/hitbox.gd
-::res://Scenes/::1747709666
-bullet.gd::GDScript::7214596415504859145::1747709665::0::1::::<>CharacterBody2D<><>0<>0<><>::
-bullet.tscn::PackedScene::2340135730643787142::1747709666::0::1::::<><><>0<>0<><>::uid://da12l4lcqcrfl::::res://Scenes/bullet.gd<>uid://w3c713qqyptc::::res://Textures/Planes/Explosion/explosion-5.png
-::res://Scripts/::1747709665
-raiderMovement.gd::GDScript::3170258497645082218::1747708760::0::1::::<>CharacterBody2D<><>0<>0<><>::
-hitbox.gd::GDScript::2615839889117508496::1747709665::0::1::::<>Area2D<><>0<>0<><>::
+::res://assets/public/img/::1747770601
+clasicRiver.jpeg::CompressedTexture2D/CompressedTexture2D::4712082678700067698::1747708760::1747708844::1::::<><><>0<>0<>6ccb5386a9c04aede651d20308f2fe1c<>res://.godot/imported/clasicRiver.jpeg-e426724252a48c52a9e899329684586e.ctex::
+NewRiver.jpg::CompressedTexture2D::9007607412797216669::1747770601::1747770886::1::::<><><>0<>0<>f662810640243fb343b84e50e45fba61<>res://.godot/imported/NewRiver.jpg-3a04d402e77487009d29836634a6a459.ctex::
+::res://Chars&World/::1747718946
+character_body_2d.tscn::PackedScene::2949868873588061193::1747718902::0::1::::<><><>0<>0<><>::uid://jg4ikih6byvs::::res://Textures/Planes/main_ship-sheet.png<>uid://blfxxut2subhy::::res://Scripts/raiderMovement.gd
+enemy_boat.tscn::PackedScene::7402877030140648005::1747718946::0::1::::<><><>0<>0<><>::uid://bk62pskjfu0uj::::res://Scripts/enemy_boat_anim.gd<>uid://dq5jxv6w5snye::::res://Textures/Enemies/PNG/Boat1_water_animation_color1/Boat1_water_spritesheet.png<>uid://bdjera6ic6kia::::res://Scripts/hitbox.gd
+Level.tscn::PackedScene::2119733693521294400::1747718902::0::1::::<><><>0<>0<><>::uid://543ww3us3avd::::res://TileMaps/tileSetGrass/preview.png<>uid://bia656h0sjnan::::res://Chars&World/character_body_2d.tscn<>uid://b8nqtjjlsoukw::::res://TileMaps/tileSetWall/galletcity.png<>uid://ddqakknshcler::::res://Chars&World/enemy_boat.tscn<>uid://bdjera6ic6kia::::res://Scripts/hitbox.gd
+::res://Scenes/::1747718902
+bullet.gd::GDScript::7214596415504859145::1747717212::0::1::::<>CharacterBody2D<><>0<>0<><>::
+bullet.tscn::PackedScene::2340135730643787142::1747718902::0::1::::<><><>0<>0<><>::uid://da12l4lcqcrfl::::res://Scenes/bullet.gd<>uid://w3c713qqyptc::::res://Textures/Planes/Explosion/explosion-5.png
+::res://Scripts/::1747718921
+enemy_boat_anim.gd::GDScript::3153971937447308837::1747718488::0::1::::<>CharacterBody2D<><>0<>0<><>::
+hitbox.gd::GDScript::2615839889117508496::1747716550::0::1::::<>Area2D<><>0<>0<><>::
+raiderMovement.gd::GDScript::3170258497645082218::1747717212::0::1::::<>CharacterBody2D<><>0<>0<><>::
 ::res://Textures/::1747174769
 ::res://Textures/Enemies/::1747174769
-License.txt::TextFile::-1::1747174768::0::1::::<><><>0<>0<><>::
-readme.txt::TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
+License.txt::TextFile/TextFile::-1::1747174768::0::1::::<><><>0<>0<><>::
+readme.txt::TextFile/TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
 ::res://Textures/Enemies/PNG/::1747504623
 Source.png::CompressedTexture2D/CompressedTexture2D::6478726994008030354::1747174769::1747504623::1::::<><><>0<>0<>eee824e450a6b67006ba097c2202feaa<>res://.godot/imported/Source.png-a24e08c937a7405d2ac941d5c2fcef38.ctex::
 Source_color2.png::CompressedTexture2D/CompressedTexture2D::2847146259144624663::1747174769::1747504623::1::::<><><>0<>0<>d57625fe1aad7c87c18c6e04d175324b<>res://.godot/imported/Source_color2.png-aa34e367607c3566a41085334791636c.ctex::
 Source_color3.png::CompressedTexture2D/CompressedTexture2D::8274643272931321770::1747174769::1747504623::1::::<><><>0<>0<>0ec54dbc17a87ed3a5d7a43c548decd8<>res://.godot/imported/Source_color3.png-9c471d75c9e869316b60caf103c1682b.ctex::
-::res://Textures/Enemies/PNG/Boat1_water_animation_color1/::1747710094
+::res://Textures/Enemies/PNG/Boat1_water_animation_color1/::1747710097
 Boat1_water_frame1.png::CompressedTexture2D/CompressedTexture2D::3684047243689616241::1747174768::1747504632::1::::<><><>0<>0<>10dd2ce6e200bb92f5a2d0a9e58aaf3c<>res://.godot/imported/Boat1_water_frame1.png-1a6b41a021a0ef7d179eec6ab9534a69.ctex::
 Boat1_water_frame2.png::CompressedTexture2D/CompressedTexture2D::585328147851242604::1747174768::1747504632::1::::<><><>0<>0<>6f9f99eabd9e5e936e108a7bcbc77c68<>res://.godot/imported/Boat1_water_frame2.png-61fd5502dcb20dc4571e433462cfada3.ctex::
 Boat1_water_frame3.png::CompressedTexture2D/CompressedTexture2D::1266256935523500016::1747174768::1747504632::1::::<><><>0<>0<>0c69eca210ca78548105c31e4e414490<>res://.godot/imported/Boat1_water_frame3.png-736e937e513f996d8c8cc771deab2daa.ctex::
 Boat1_water_frame4.png::CompressedTexture2D/CompressedTexture2D::7497906657011363140::1747174768::1747504632::1::::<><><>0<>0<>c6ee577945b9263b30c400b7e8793883<>res://.godot/imported/Boat1_water_frame4.png-be653de7878b0e1360b6c791be6d41e4.ctex::
-Boat1_water_spritesheet.png::CompressedTexture2D::8344803560024008024::1747710052::1747710097::1::::<><><>0<>0<>1aa96ba3a935a99d6ef03335f918538b<>res://.godot/imported/Boat1_water_spritesheet.png-2fe13fb00ded3a5d9c4b95174cd78aa2.ctex::
+Boat1_water_spritesheet.png::CompressedTexture2D/CompressedTexture2D::8344803560024008024::1747710052::1747710097::1::::<><><>0<>0<>1aa96ba3a935a99d6ef03335f918538b<>res://.godot/imported/Boat1_water_spritesheet.png-2fe13fb00ded3a5d9c4b95174cd78aa2.ctex::
 ::res://Textures/Enemies/PNG/Boat1_water_animation_color2/::1747504632
 Boat1_water_frame1.png::CompressedTexture2D/CompressedTexture2D::1189623127947914143::1747174768::1747504632::1::::<><><>0<>0<>fce920ae0242c072a4820f0dae50613c<>res://.godot/imported/Boat1_water_frame1.png-f5ed04998e0a028c48fcd77e6df3f1f2.ctex::
 Boat1_water_frame2.png::CompressedTexture2D/CompressedTexture2D::3694014092723409686::1747174768::1747504632::1::::<><><>0<>0<>8f48fb03e93cd48283efbfd77b0f05e0<>res://.godot/imported/Boat1_water_frame2.png-9c0693207baf47f8399972d9b32d8de5.ctex::
@@ -286,8 +288,8 @@ tile_0099_water26.png::CompressedTexture2D/CompressedTexture2D::5758280367473260
 tile_0100_water27.png::CompressedTexture2D/CompressedTexture2D::5940521387739472429::1747174769::1747504623::1::::<><><>0<>0<>7b6349e385a821c8b3b195e7ae43a26e<>res://.godot/imported/tile_0100_water27.png-152dab4ec08e38f698f600342b2dc199.ctex::
 tile_0101_water28.png::CompressedTexture2D/CompressedTexture2D::4152499262131279244::1747174769::1747504623::1::::<><><>0<>0<>37e93084ecdb8767019281f9ba07f0d0<>res://.godot/imported/tile_0101_water28.png-8e801b875b62ed95a6305043268fa564.ctex::
 ::res://Textures/partsOfTheMap/::1747174769
-Extras credit.txt::TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
-LICENSE.txt::TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
+Extras credit.txt::TextFile/TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
+LICENSE.txt::TextFile/TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
 ::res://Textures/partsOfTheMap/Cars/::1747504622
 NPC_cars (16 x 16).png::CompressedTexture2D/CompressedTexture2D::1100453916365428820::1747174769::1747504622::1::::<><><>0<>0<>b2afa8c614deb55fc8e10a1012b5d463<>res://.godot/imported/NPC_cars (16 x 16).png-fd9f9484a2cad30e6b9531b6fa0b1c96.ctex::
 Player_blue (16 x 16).png::CompressedTexture2D/CompressedTexture2D::6023099232166625107::1747174769::1747504622::1::::<><><>0<>0<>53fd26ee7bd0d898cd928dc6e9366fa9<>res://.godot/imported/Player_blue (16 x 16).png-b7820cc96d0ee30bbf5a00ac8b5dcc3c.ctex::
@@ -326,7 +328,7 @@ Player_arrow_indicator (8 x 8).png::CompressedTexture2D/CompressedTexture2D::788
 Race_progress (8 x 8).png::CompressedTexture2D/CompressedTexture2D::1697028968407066493::1747174769::1747504628::1::::<><><>0<>0<>e160b8d6b6f39d1d20e43e31cc368e0a<>res://.godot/imported/Race_progress (8 x 8).png-01cd394885970825e87ae280f7e34af9.ctex::
 Speed_indicator_numbers (8 x 8).png::CompressedTexture2D/CompressedTexture2D::6924816925049181836::1747174769::1747504628::1::::<><><>0<>0<>fd044afe3a144ad70525182934423028<>res://.godot/imported/Speed_indicator_numbers (8 x 8).png-4b9cc978ba720feadb65bc5a3143d82d.ctex::
 ::res://Textures/Planes/::1747513817
-_Readme.txt::TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
+_Readme.txt::TextFile/TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
 blue_01.png::CompressedTexture2D/CompressedTexture2D::176337882961830375::1747174769::1747504629::1::::<><><>0<>0<>08950336f970aae63dc8aa947cb4bd8a<>res://.godot/imported/blue_01.png-c23216b781097ee41039c62c658a4100.ctex::
 darkgrey_02.png::CompressedTexture2D/CompressedTexture2D::5164723675912971239::1747174769::1747504629::1::::<><><>0<>0<>a5ae86ed067f8d744b6a311b25f6cf08<>res://.godot/imported/darkgrey_02.png-359b7943843cd9ffe5359d9b418f67e9.ctex::
 enemy_1_1.png::CompressedTexture2D/CompressedTexture2D::101972866128613140::1747174769::1747504629::1::::<><><>0<>0<>d46e2e048279bcf9d90d44324f91b38b<>res://.godot/imported/enemy_1_1.png-3eb83233d4a90ee2e1e8328bc0d29835.ctex::

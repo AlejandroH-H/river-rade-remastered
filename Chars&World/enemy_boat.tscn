@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dq5jxv6w5snye" path="res://Textures/Enemies/PNG/Boat1_water_animation_color1/Boat1_water_spritesheet.png" id="1_nfp0i"]
 [ext_resource type="Script" uid="uid://bdjera6ic6kia" path="res://Scripts/hitbox.gd" id="2_hlq4p"]
 
+[sub_resource type="Animation" id="Animation_xxrmw"]
+resource_name = "Death"
+
 [sub_resource type="Animation" id="Animation_hlq4p"]
 resource_name = "Idle"
 length = 1.4
@@ -23,9 +26,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_2seb3"]
 length = 0.001
-
-[sub_resource type="Animation" id="Animation_xxrmw"]
-resource_name = "Death"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xxrmw"]
 _data = {
