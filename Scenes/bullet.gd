@@ -12,7 +12,7 @@ func _physics_process(delta):
 	if collision:
 		var collider = collision.get_collider()
 		if collider:
-			if collider.get_name() == "Enemy_Boat":
+			if collider.get_name() == "Enemy_Boat" or collider.get_name() == "Enemy_Helicopter":
 				collider.queue_free()
 				queue_free()
 			else:
