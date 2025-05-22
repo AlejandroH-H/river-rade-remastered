@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://5g2x7djaxohc"]
+[gd_scene load_steps=13 format=3 uid="uid://5g2x7djaxohc"]
 
 [ext_resource type="Texture2D" uid="uid://543ww3us3avd" path="res://TileMaps/tileSetGrass/preview.png" id="1_i3x0a"]
 [ext_resource type="PackedScene" uid="uid://bia656h0sjnan" path="res://Chars&World/character_body_2d.tscn" id="2_vryhi"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ddqakknshcler" path="res://Chars&World/enemy_boat.tscn" id="4_d51wo"]
 [ext_resource type="Script" uid="uid://bdjera6ic6kia" path="res://Scripts/hitbox.gd" id="4_ibwqx"]
 [ext_resource type="PackedScene" uid="uid://cyas2s48mh31p" path="res://Chars&World/enemy_helicopter.tscn" id="5_cjta5"]
+[ext_resource type="PackedScene" uid="uid://b0m17s6g51vce" path="res://Scenes/fuelTank.tscn" id="7_eryi1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vryhi"]
 texture = ExtResource("1_i3x0a")
@@ -2151,5 +2152,8 @@ script = ExtResource("4_ibwqx")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(48, -682)
 shape = SubResource("RectangleShape2D_d51wo")
+
+[node name="fuelTank" parent="Area2D" instance=ExtResource("7_eryi1")]
+position = Vector2(19, -390)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

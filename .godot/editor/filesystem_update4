@@ -1,3 +1,8 @@
 res://Chars&World/Level.tscn
-res://Scripts/raiderMovement.gd
 res://Chars&World/character_body_2d.tscn
+res://Chars&World/enemy_helicopter.tscn
+res://Scripts/TimerBar.gd
+res://Scripts/raiderMovement.gd
+res://Scenes/bullet.gd
+res://Scenes/fuelTank.tscn
+res://Scripts/fuelTank.gd

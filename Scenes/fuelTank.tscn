@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://b0m17s6g51vce"]
+
+[ext_resource type="Texture2D" uid="uid://dxy53fxeje554" path="res://Textures/partsOfTheMap/Props/gas-tank.png" id="1_debyx"]
+[ext_resource type="Script" uid="uid://qtswirsc0gyt" path="res://Scripts/fuelTank.gd" id="2_hwqe1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hwqe1"]
+radius = 9.05539
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oyj55"]
+size = Vector2(20, 28)
+
+[node name="fuelTank" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_debyx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.42109e-14, 5)
+shape = SubResource("CircleShape2D_hwqe1")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-1, 2)
+script = ExtResource("2_hwqe1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_oyj55")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
