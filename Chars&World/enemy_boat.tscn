@@ -1,11 +1,24 @@
 [gd_scene load_steps=10 format=3 uid="uid://ddqakknshcler"]
 
 [ext_resource type="Script" uid="uid://gkgdvrwfcrhx" path="res://Scripts/enemy_boat_movement.gd" id="1_2seb3"]
-[ext_resource type="Texture2D" uid="uid://dq5jxv6w5snye" path="res://Textures/Enemies/PNG/Boat1_water_animation_color1/Boat1_water_spritesheet.png" id="1_nfp0i"]
+[ext_resource type="Texture2D" uid="uid://coqlgaos8vedd" path="res://Textures/Enemies/PNG/Boat1_water_animation_color2/Boat1_water_spritesheet.png" id="2_2seb3"]
 [ext_resource type="Script" uid="uid://bdjera6ic6kia" path="res://Scripts/hitbox.gd" id="2_hlq4p"]
 
 [sub_resource type="Animation" id="Animation_xxrmw"]
 resource_name = "Death"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.333333, 0.466667, 0.633333, 0.733333, 0.866667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7, 8, 9, 10]
+}
 
 [sub_resource type="Animation" id="Animation_hlq4p"]
 resource_name = "Idle"
@@ -26,6 +39,18 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_2seb3"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xxrmw"]
 _data = {
@@ -39,9 +64,9 @@ radius = 15.0
 height = 78.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hlq4p"]
-size = Vector2(66.25, 30.875)
+size = Vector2(69.125, 30.875)
 
-[node name="Enemy_Boat" type="CharacterBody2D"]
+[node name="Enemy_Boat" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_2seb3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -49,10 +74,11 @@ texture_filter = 1
 position = Vector2(-9, 1)
 rotation = -1.5708
 scale = Vector2(0.84375, 0.734375)
-texture = ExtResource("1_nfp0i")
+texture = ExtResource("2_2seb3")
 flip_v = true
-hframes = 2
-vframes = 2
+hframes = 3
+vframes = 4
+frame = 4
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -68,7 +94,7 @@ shape = SubResource("CapsuleShape2D_2seb3")
 script = ExtResource("2_hlq4p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-7, 1)
+position = Vector2(-5.5625, 1)
 shape = SubResource("RectangleShape2D_hlq4p")
 
 [node name="RayCast2D_Left" type="RayCast2D" parent="."]
