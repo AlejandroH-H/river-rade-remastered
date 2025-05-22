@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 project/assembly_name="River Rade (Remastered)"
 
+[global_group]
+
+Player=""
+
 [input]
 
 ia_up={
