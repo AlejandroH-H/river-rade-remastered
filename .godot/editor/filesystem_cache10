@@ -1,30 +1,32 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1747864527
+::res://::1747944361
 icon.svg::CompressedTexture2D/CompressedTexture2D::7482147990888647328::1747174769::1747504627::1::::<><><>0<>0<>ec382b76b68e215288a479bce15452a1<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-README.md::TextFile::-1::1747770601::0::1::::<><><>0<>0<><>::
+README.md::TextFile/TextFile::-1::1747770601::0::1::::<><><>0<>0<><>::
 ::res://assets/::1747708760
 ::res://assets/public/::1747708760
 ::res://assets/public/img/::1747770886
 clasicRiver.jpeg::CompressedTexture2D/CompressedTexture2D::4712082678700067698::1747708760::1747708844::1::::<><><>0<>0<>6ccb5386a9c04aede651d20308f2fe1c<>res://.godot/imported/clasicRiver.jpeg-e426724252a48c52a9e899329684586e.ctex::
 NewRiver.jpg::CompressedTexture2D/CompressedTexture2D::9007607412797216669::1747770601::1747770886::1::::<><><>0<>0<>f662810640243fb343b84e50e45fba61<>res://.godot/imported/NewRiver.jpg-3a04d402e77487009d29836634a6a459.ctex::
-::res://Chars&World/::1747867849
-character_body_2d.tscn::PackedScene::2949868873588061193::1747867849::0::1::::<><><>0<>0<><>::uid://jg4ikih6byvs::::res://Textures/Planes/main_ship-sheet.png<>uid://blfxxut2subhy::::res://Scripts/raiderMovement.gd<>uid://b4ksibp6ixjuj::::res://Scripts/TimerBar.gd
-enemy_boat.tscn::PackedScene::7402877030140648005::1747864484::0::1::::<><><>0<>0<><>::uid://gkgdvrwfcrhx::::res://Scripts/enemy_boat_movement.gd<>uid://dq5jxv6w5snye::::res://Textures/Enemies/PNG/Boat1_water_animation_color1/Boat1_water_spritesheet.png<>uid://bdjera6ic6kia::::res://Scripts/hitbox.gd
-enemy_helicopter.tscn::PackedScene::6458515728739551947::1747867849::0::1::::<><><>0<>0<><>::uid://bk62pskjfu0uj::::res://Scripts/enemy_helicopter_movement.gd<>uid://bkt3uqn6ngs6c::::res://Textures/Enemies/PNG/Helicopter/helicopter.png<>uid://bdjera6ic6kia::::res://Scripts/hitbox.gd
-Level.tscn::PackedScene::2119733693521294400::1747867848::0::1::::<><><>0<>0<><>::uid://543ww3us3avd::::res://TileMaps/tileSetGrass/preview.png<>uid://bia656h0sjnan::::res://Chars&World/character_body_2d.tscn<>uid://b8nqtjjlsoukw::::res://TileMaps/tileSetWall/galletcity.png<>uid://ddqakknshcler::::res://Chars&World/enemy_boat.tscn<>uid://bdjera6ic6kia::::res://Scripts/hitbox.gd<>uid://cyas2s48mh31p::::res://Chars&World/enemy_helicopter.tscn
-::res://Scenes/::1747864484
-bullet.gd::GDScript::7214596415504859145::1747864484::0::1::::<>CharacterBody2D<><>0<>0<><>::
-bullet.tscn::PackedScene::2340135730643787142::1747860076::0::1::::<><><>0<>0<><>::uid://da12l4lcqcrfl::::res://Scenes/bullet.gd<>uid://w3c713qqyptc::::res://Textures/Planes/Explosion/explosion-5.png
-::res://Scripts/::1747867848
-enemy_boat_movement.gd::GDScript::442147628965493161::1747864484::0::1::::<>CharacterBody2D<><>0<>0<><>::
-enemy_helicopter_movement.gd::GDScript::3153971937447308837::1747864484::0::1::::<>CharacterBody2D<><>0<>0<><>::
-hitbox.gd::GDScript::2615839889117508496::1747772084::0::1::::<>Area2D<><>0<>0<><>::
+::res://Chars&World/::1747876598
+character_body_2d.tscn::PackedScene::2949868873588061193::1747876598::0::1::::<><><>0<>0<><>::uid://jg4ikih6byvs::::res://Textures/Planes/main_ship-sheet.png<>uid://blfxxut2subhy::::res://Scripts/raiderMovement.gd<>uid://b4ksibp6ixjuj::::res://Scripts/TimerBar.gd
+enemy_boat.tscn::PackedScene/PackedScene::7402877030140648005::1747864484::0::1::::<><><>0<>0<><>::uid://gkgdvrwfcrhx::::res://Scripts/enemy_boat_movement.gd<>uid://dq5jxv6w5snye::::res://Textures/Enemies/PNG/Boat1_water_animation_color1/Boat1_water_spritesheet.png<>uid://bdjera6ic6kia::::res://Scripts/hitbox.gd
+enemy_helicopter.tscn::PackedScene::6458515728739551947::1747876598::0::1::::<><><>0<>0<><>::uid://bk62pskjfu0uj::::res://Scripts/enemy_helicopter_movement.gd<>uid://bkt3uqn6ngs6c::::res://Textures/Enemies/PNG/Helicopter/helicopter.png<>uid://bdjera6ic6kia::::res://Scripts/hitbox.gd
+Level.tscn::PackedScene::2119733693521294400::1747876597::0::1::::<><><>0<>0<><>::uid://543ww3us3avd::::res://TileMaps/tileSetGrass/preview.png<>uid://bia656h0sjnan::::res://Chars&World/character_body_2d.tscn<>uid://b8nqtjjlsoukw::::res://TileMaps/tileSetWall/galletcity.png<>uid://ddqakknshcler::::res://Chars&World/enemy_boat.tscn<>uid://bdjera6ic6kia::::res://Scripts/hitbox.gd<>uid://cyas2s48mh31p::::res://Chars&World/enemy_helicopter.tscn<>uid://b0m17s6g51vce::::res://Scenes/fuelTank.tscn
+::res://Scenes/::1747876656
+bullet.gd::GDScript::7214596415504859145::1747869908::0::1::::<>CharacterBody2D<><>0<>0<><>::
+bullet.tscn::PackedScene/PackedScene::2340135730643787142::1747860076::0::1::::<><><>0<>0<><>::uid://da12l4lcqcrfl::::res://Scenes/bullet.gd<>uid://w3c713qqyptc::::res://Textures/Planes/Explosion/explosion-5.png
+fuelTank.tscn::PackedScene::4167551088532501068::1747876656::0::1::::<><><>0<>0<><>::uid://dxy53fxeje554::::res://Textures/partsOfTheMap/Props/gas-tank.png<>uid://qtswirsc0gyt::::res://Scripts/fuelTank.gd
+::res://Scripts/::1747876598
+enemy_boat_movement.gd::GDScript/GDScript::442147628965493161::1747864484::0::1::::<>CharacterBody2D<><>0<>0<><>::
+enemy_helicopter_movement.gd::GDScript/GDScript::3153971937447308837::1747864484::0::1::::<>CharacterBody2D<><>0<>0<><>::
+fuelTank.gd::GDScript::1163377316141334851::1747876598::0::1::::<>Area2D<><>0<>0<><>::
+hitbox.gd::GDScript/GDScript::2615839889117508496::1747772084::0::1::::<>Area2D<><>0<>0<><>::
 raiderMovement.gd::GDScript::3170258497645082218::1747867848::0::1::::<>CharacterBody2D<><>0<>0<><>::
-TimerBar.gd::GDScript::4443648196073193773::1747867691::0::1::::<>Line2D<><>0<>0<><>::
+TimerBar.gd::GDScript::4443648196073193773::1747875511::0::1::::<>Line2D<><>0<>0<><>::
 ::res://Textures/::1747174769
 ::res://Textures/Enemies/::1747174769
-License.txt::TextFile::-1::1747174768::0::1::::<><><>0<>0<><>::
-readme.txt::TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
+License.txt::TextFile/TextFile::-1::1747174768::0::1::::<><><>0<>0<><>::
+readme.txt::TextFile/TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
 ::res://Textures/Enemies/PNG/::1747864484
 Source.png::CompressedTexture2D/CompressedTexture2D::6478726994008030354::1747174769::1747504623::1::::<><><>0<>0<>eee824e450a6b67006ba097c2202feaa<>res://.godot/imported/Source.png-a24e08c937a7405d2ac941d5c2fcef38.ctex::
 Source_color2.png::CompressedTexture2D/CompressedTexture2D::2847146259144624663::1747174769::1747504623::1::::<><><>0<>0<>d57625fe1aad7c87c18c6e04d175324b<>res://.godot/imported/Source_color2.png-aa34e367607c3566a41085334791636c.ctex::
@@ -35,11 +37,12 @@ Boat1_water_frame2.png::CompressedTexture2D/CompressedTexture2D::585328147851242
 Boat1_water_frame3.png::CompressedTexture2D/CompressedTexture2D::1266256935523500016::1747174768::1747504632::1::::<><><>0<>0<>0c69eca210ca78548105c31e4e414490<>res://.godot/imported/Boat1_water_frame3.png-736e937e513f996d8c8cc771deab2daa.ctex::
 Boat1_water_frame4.png::CompressedTexture2D/CompressedTexture2D::7497906657011363140::1747174768::1747504632::1::::<><><>0<>0<>c6ee577945b9263b30c400b7e8793883<>res://.godot/imported/Boat1_water_frame4.png-be653de7878b0e1360b6c791be6d41e4.ctex::
 Boat1_water_spritesheet.png::CompressedTexture2D/CompressedTexture2D::8344803560024008024::1747710052::1747710097::1::::<><><>0<>0<>1aa96ba3a935a99d6ef03335f918538b<>res://.godot/imported/Boat1_water_spritesheet.png-2fe13fb00ded3a5d9c4b95174cd78aa2.ctex::
-::res://Textures/Enemies/PNG/Boat1_water_animation_color2/::1747504632
+::res://Textures/Enemies/PNG/Boat1_water_animation_color2/::1747944269
 Boat1_water_frame1.png::CompressedTexture2D/CompressedTexture2D::1189623127947914143::1747174768::1747504632::1::::<><><>0<>0<>fce920ae0242c072a4820f0dae50613c<>res://.godot/imported/Boat1_water_frame1.png-f5ed04998e0a028c48fcd77e6df3f1f2.ctex::
 Boat1_water_frame2.png::CompressedTexture2D/CompressedTexture2D::3694014092723409686::1747174768::1747504632::1::::<><><>0<>0<>8f48fb03e93cd48283efbfd77b0f05e0<>res://.godot/imported/Boat1_water_frame2.png-9c0693207baf47f8399972d9b32d8de5.ctex::
 Boat1_water_frame3.png::CompressedTexture2D/CompressedTexture2D::8469119049691020777::1747174768::1747504632::1::::<><><>0<>0<>544c6862ee83f4f90215701c1c8dab45<>res://.godot/imported/Boat1_water_frame3.png-663720061cdb1eafe8ab52eb449adee3.ctex::
 Boat1_water_frame4.png::CompressedTexture2D/CompressedTexture2D::6914838925269076581::1747174768::1747504632::1::::<><><>0<>0<>1f626e3b5da4f9f7d7a59cc33ca747ff<>res://.godot/imported/Boat1_water_frame4.png-c68874cb01417f9866050621df3a7441.ctex::
+Boat1_water_spritesheet.png::CompressedTexture2D::5789193846557501041::1747943925::1747944365::1::::<><><>0<>0<>a9ddcfe94257739e36e05319b1b795dd<>res://.godot/imported/Boat1_water_spritesheet.png-0e9013e21e5dd3cc14d7beb64f7f311f.ctex::
 ::res://Textures/Enemies/PNG/Boat1_water_animation_color3/::1747504632
 Boat1_water_frame1.png::CompressedTexture2D/CompressedTexture2D::5214090173573544126::1747174768::1747504632::1::::<><><>0<>0<>b3747890493c7d667e45a39149570898<>res://.godot/imported/Boat1_water_frame1.png-206f144bfde571218c16083c4846b6b0.ctex::
 Boat1_water_frame2.png::CompressedTexture2D/CompressedTexture2D::3600668627442828680::1747174768::1747504632::1::::<><><>0<>0<>422a669fbf1fa7e0fd2e42b7d4511283<>res://.godot/imported/Boat1_water_frame2.png-b1fcc69698a36986235f0b1d47c01f64.ctex::
@@ -222,8 +225,9 @@ Fire3_3.png::CompressedTexture2D/CompressedTexture2D::2364494565712675028::17471
 Fire4_1.png::CompressedTexture2D/CompressedTexture2D::654905669422153164::1747174769::1747504634::1::::<><><>0<>0<>f6593e648a1b9451a6bcb4958c31bb6f<>res://.godot/imported/Fire4_1.png-f2c727cc67e2e112f17963ff14b80f9f.ctex::
 Fire4_2.png::CompressedTexture2D/CompressedTexture2D::2707125755270964902::1747174769::1747504634::1::::<><><>0<>0<>7d857faa700de745274e658f75fd8001<>res://.godot/imported/Fire4_2.png-3eef0cebd81e9981f2da5009c5544c23.ctex::
 Fire4_3.png::CompressedTexture2D/CompressedTexture2D::27682983138927481::1747174769::1747504634::1::::<><><>0<>0<>51261a060144452fa9dd076c0eb96c7b<>res://.godot/imported/Fire4_3.png-476737c290c49f942debd5bf069e2b67.ctex::
-::res://Textures/Enemies/PNG/Helicopter/::1747864697
+::res://Textures/Enemies/PNG/Helicopter/::1747944294
 helicopter.png::CompressedTexture2D/CompressedTexture2D::3129268950958307464::1747864484::1747864697::1::::<><><>0<>0<>5b1fa5c1aedc676f22522253c7646f8d<>res://.godot/imported/helicopter.png-58e39b7d96df91d37a5695a36f3131b6.ctex::
+Helicopter_Sheet.png::CompressedTexture2D::5188769194367437810::1747944214::1747944365::1::::<><><>0<>0<>8ade4c4c45d09b22be9bbb8d1fa3400b<>res://.godot/imported/Helicopter_Sheet.png-fc42f2be39d28c6dacae5cc1de4abb62.ctex::
 ::res://Textures/Enemies/PNG/Helicopter/broken_parts/::1747864696
 cabine.png::CompressedTexture2D/CompressedTexture2D::4526722315316194789::1747864484::1747864696::1::::<><><>0<>0<>847918b75e2fbfce830876d9d1b83f7c<>res://.godot/imported/cabine.png-0525be786b93863f6ef8a73eb3db819f.ctex::
 door_16x16.png::CompressedTexture2D/CompressedTexture2D::1815244162698276629::1747864484::1747864696::1::::<><><>0<>0<>c0916a92504438e5f9a273a8d64e12b2<>res://.godot/imported/door_16x16.png-6bb0f0ee64ae0c68312ce48a43162e79.ctex::
@@ -306,8 +310,8 @@ tile_0099_water26.png::CompressedTexture2D/CompressedTexture2D::5758280367473260
 tile_0100_water27.png::CompressedTexture2D/CompressedTexture2D::5940521387739472429::1747174769::1747504623::1::::<><><>0<>0<>7b6349e385a821c8b3b195e7ae43a26e<>res://.godot/imported/tile_0100_water27.png-152dab4ec08e38f698f600342b2dc199.ctex::
 tile_0101_water28.png::CompressedTexture2D/CompressedTexture2D::4152499262131279244::1747174769::1747504623::1::::<><><>0<>0<>37e93084ecdb8767019281f9ba07f0d0<>res://.godot/imported/tile_0101_water28.png-8e801b875b62ed95a6305043268fa564.ctex::
 ::res://Textures/partsOfTheMap/::1747174769
-Extras credit.txt::TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
-LICENSE.txt::TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
+Extras credit.txt::TextFile/TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
+LICENSE.txt::TextFile/TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
 ::res://Textures/partsOfTheMap/Cars/::1747504622
 NPC_cars (16 x 16).png::CompressedTexture2D/CompressedTexture2D::1100453916365428820::1747174769::1747504622::1::::<><><>0<>0<>b2afa8c614deb55fc8e10a1012b5d463<>res://.godot/imported/NPC_cars (16 x 16).png-fd9f9484a2cad30e6b9531b6fa0b1c96.ctex::
 Player_blue (16 x 16).png::CompressedTexture2D/CompressedTexture2D::6023099232166625107::1747174769::1747504622::1::::<><><>0<>0<>53fd26ee7bd0d898cd928dc6e9366fa9<>res://.godot/imported/Player_blue (16 x 16).png-b7820cc96d0ee30bbf5a00ac8b5dcc3c.ctex::
@@ -335,8 +339,8 @@ Cherry (32 x 32).png::CompressedTexture2D/CompressedTexture2D::59423682327189068
 Cop (32 x 32).png::CompressedTexture2D/CompressedTexture2D::5987684768381008589::1747174769::1747504628::1::::<><><>0<>0<>7a7d7a8dbea3a259d648884ef99916dc<>res://.godot/imported/Cop (32 x 32).png-2f4cc7be54e12845ce2b7b52ef0ed7c3.ctex::
 Lemon (32 x 32).png::CompressedTexture2D/CompressedTexture2D::5026610938465649314::1747174769::1747504628::1::::<><><>0<>0<>d7197db49583ae831cbb37aa54f787f3<>res://.godot/imported/Lemon (32 x 32).png-fba3bd5a285e4f2421fcfc0ac969c4f9.ctex::
 Slime (32 x 32).png::CompressedTexture2D/CompressedTexture2D::5371425102706904559::1747174769::1747504628::1::::<><><>0<>0<>56aa1975bffddba5a6643e10b0585ea6<>res://.godot/imported/Slime (32 x 32).png-c61f82791f624668a90691847bc279af.ctex::
-::res://Textures/partsOfTheMap/Props/::1747869095
-gas-tank.png::CompressedTexture2D::8825022331205027585::1747869008::1747869104::1::::<><><>0<>0<>628a91f6a83ae6a2434b9752142018f9<>res://.godot/imported/gas-tank.png-079884329a7b940a61d24308803cf531.ctex::
+::res://Textures/partsOfTheMap/Props/::1747869104
+gas-tank.png::CompressedTexture2D/CompressedTexture2D::8825022331205027585::1747869008::1747869104::1::::<><><>0<>0<>628a91f6a83ae6a2434b9752142018f9<>res://.godot/imported/gas-tank.png-079884329a7b940a61d24308803cf531.ctex::
 Misc_props (16 x 16).png::CompressedTexture2D/CompressedTexture2D::1391317248363416264::1747174769::1747504628::1::::<><><>0<>0<>90df3e748896712ee969165436f50954<>res://.godot/imported/Misc_props (16 x 16).png-65a7d60b3e0565fa330dbbb6eb41adda.ctex::
 Road_markings (16 x 16).png::CompressedTexture2D/CompressedTexture2D::1284204404808480047::1747174769::1747504628::1::::<><><>0<>0<>988d685ce1c3a496c5cf9fe0dd4ce14b<>res://.godot/imported/Road_markings (16 x 16).png-ca69ca98dc36f704bb151dce715a9c14.ctex::
 ::res://Textures/partsOfTheMap/UI/::1747504628
@@ -346,8 +350,8 @@ Main_UI (32 x 176).png::CompressedTexture2D/CompressedTexture2D::870344632876139
 Player_arrow_indicator (8 x 8).png::CompressedTexture2D/CompressedTexture2D::7889380748006271218::1747174769::1747504628::1::::<><><>0<>0<>ecaa6a6a1afc31f5416d5b80de63f680<>res://.godot/imported/Player_arrow_indicator (8 x 8).png-212ab9b7f36429af10d7b1e9ee74dcfc.ctex::
 Race_progress (8 x 8).png::CompressedTexture2D/CompressedTexture2D::1697028968407066493::1747174769::1747504628::1::::<><><>0<>0<>e160b8d6b6f39d1d20e43e31cc368e0a<>res://.godot/imported/Race_progress (8 x 8).png-01cd394885970825e87ae280f7e34af9.ctex::
 Speed_indicator_numbers (8 x 8).png::CompressedTexture2D/CompressedTexture2D::6924816925049181836::1747174769::1747504628::1::::<><><>0<>0<>fd044afe3a144ad70525182934423028<>res://.godot/imported/Speed_indicator_numbers (8 x 8).png-4b9cc978ba720feadb65bc5a3143d82d.ctex::
-::res://Textures/Planes/::1747513817
-_Readme.txt::TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
+::res://Textures/Planes/::1747943309
+_Readme.txt::TextFile/TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
 blue_01.png::CompressedTexture2D/CompressedTexture2D::176337882961830375::1747174769::1747504629::1::::<><><>0<>0<>08950336f970aae63dc8aa947cb4bd8a<>res://.godot/imported/blue_01.png-c23216b781097ee41039c62c658a4100.ctex::
 darkgrey_02.png::CompressedTexture2D/CompressedTexture2D::5164723675912971239::1747174769::1747504629::1::::<><><>0<>0<>a5ae86ed067f8d744b6a311b25f6cf08<>res://.godot/imported/darkgrey_02.png-359b7943843cd9ffe5359d9b418f67e9.ctex::
 enemy_1_1.png::CompressedTexture2D/CompressedTexture2D::101972866128613140::1747174769::1747504629::1::::<><><>0<>0<>d46e2e048279bcf9d90d44324f91b38b<>res://.godot/imported/enemy_1_1.png-3eb83233d4a90ee2e1e8328bc0d29835.ctex::
@@ -375,12 +379,15 @@ main_ship-13.png::CompressedTexture2D/CompressedTexture2D::4325247940890167936::
 main_ship-14.png::CompressedTexture2D/CompressedTexture2D::5015788653900159630::1747174769::1747504628::1::::<><><>0<>0<>54a64ba9611a083962a81c23b2810f38<>res://.godot/imported/main_ship-14.png-315a690ad35bcf94a4c521c1d6f12bcd.ctex::
 main_ship-15.png::CompressedTexture2D/CompressedTexture2D::8165136751484554351::1747174769::1747504628::1::::<><><>0<>0<>a57453c2112b51c1270e1c5bdccefe66<>res://.godot/imported/main_ship-15.png-f959834151ba7c55caba480dba59667c.ctex::
 main_ship-sheet.png::CompressedTexture2D/CompressedTexture2D::645861476359595668::1747513745::1747513817::1::::<><><>0<>0<>9b95449e8a0032df3310f2fc1d4a53fe<>res://.godot/imported/main_ship-sheet.png-fc47ea668251056e3e59ca6689360860.ctex::
+main_ship-spritesheet.png::CompressedTexture2D::6906704569314434784::1747943281::1747944365::1::::<><><>0<>0<>c64813d5f971116ec02e0fb4f0347dce<>res://.godot/imported/main_ship-spritesheet.png-6402a0e235ae0a6f29bd3d85cb23a84c.ctex::
 metalic_02.png::CompressedTexture2D/CompressedTexture2D::1873630454066367973::1747174769::1747504628::1::::<><><>0<>0<>36f69de23755751de595c831bdcf644b<>res://.godot/imported/metalic_02.png-763a3961a99af0c5496f1e44dc3b0c2d.ctex::
+missile.png::CompressedTexture2D::1164322265100909208::1647820368::1747944365::1::::<><><>0<>0<>b6330d51e0e8c83bdad7110d02c48227<>res://.godot/imported/missile.png-28055c236ec30f2b555d018c12cf20fb.ctex::
 orange_03.png::CompressedTexture2D/CompressedTexture2D::211957478240604055::1747174769::1747504627::1::::<><><>0<>0<>20caf0cc948ba30672da393aaac0db29<>res://.godot/imported/orange_03.png-c2264f8ad6db80bc6a7fe1552ea4bd25.ctex::
 projectile_1.png::CompressedTexture2D/CompressedTexture2D::8206633306811646535::1747174769::1747504627::1::::<><><>0<>0<>9223c98408c2d09ab2c69d34e174eb2b<>res://.godot/imported/projectile_1.png-d1d97e1f17a7baf7ff637bcc0af2e6d7.ctex::
 projectile_2.png::CompressedTexture2D/CompressedTexture2D::4643424333411368330::1747174769::1747504627::1::::<><><>0<>0<>fd43a8cf10d0fca856ac565f5f371952<>res://.godot/imported/projectile_2.png-b3e67e8e3b35315ef4d84ab7007df429.ctex::
 purple_03.png::CompressedTexture2D/CompressedTexture2D::5936788217708170192::1747174769::1747504627::1::::<><><>0<>0<>4ede4a2883d836876784631eeb90df37<>res://.godot/imported/purple_03.png-91c9fb4f3671b60681763c107bd6e59e.ctex::
 red_01.png::CompressedTexture2D/CompressedTexture2D::5467852675773072237::1747174769::1747504627::1::::<><><>0<>0<>5c70c1476cd82623cab22e381f85be37<>res://.godot/imported/red_01.png-ff876478974a7ec8b775771cfec22250.ctex::
+Space Ships Explosion.png::CompressedTexture2D::4875442785454009302::1647824443::1747944365::1::::<><><>0<>0<>e1ad1e0ff623963d89f3b32a3cae5018<>res://.godot/imported/Space Ships Explosion.png-6fb92802a56f918e691a9ca0b5e51a95.ctex::
 spritesheet_enemy_1.png::CompressedTexture2D/CompressedTexture2D::6344547622786825111::1747174769::1747504627::1::::<><><>0<>0<>7c055ed67ebceac16891a3b114e43fb5<>res://.godot/imported/spritesheet_enemy_1.png-0cd424adb7b1a156447eedb27b76bff2.ctex::
 spritesheet_enemy_2.png::CompressedTexture2D/CompressedTexture2D::6441813899651684602::1747174769::1747504627::1::::<><><>0<>0<>9168390d0d415a92567c365437cd0cb5<>res://.godot/imported/spritesheet_enemy_2.png-38095897d8a4bbfb869eb0f1aeadca3a.ctex::
 spritesheet_player.png::CompressedTexture2D/CompressedTexture2D::7482209944800040164::1747174769::1747504627::1::::<><><>0<>0<>d7715993707583d7e069fa0b7c2fedb2<>res://.godot/imported/spritesheet_player.png-fdb55cf713dbdd1f5b52a9ea330f08af.ctex::

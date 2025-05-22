@@ -9,33 +9,40 @@ var bulletCount = 0 #Variable para validar la cantidad de balas que se disparan
 var maxBullets = 5 #Variable que indica cuántas balas se pueden disparar
 var canShoot = true #Variable bandera que activa el uso de las balas
 var is_dead = false
+var hitbox = false
+
 
 func _physics_process(delta: float) -> void:
 	
-	
-	if not is_dead:
-		velocity.y = -SPEED
-		if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and canShoot:
-			canShoot = false
-			bulletCount = 0
-			shootSequence()
-			# En esta secuencia, se está validando que al oprimir el click izquierdo y que la variable bandera esté verdadera, que entre a nuestra función de control de disparos, para controlar el flujo
+	if hitbox:
+		velocity.y = 0
+		velocity.x = 0
+		$AnimationPlayer.play("Death")
+		quit_timer()
+	else:
+		if not is_dead:
+			velocity.y = -SPEED
+			if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and canShoot:
+				canShoot = false
+				bulletCount = 0
+				shootSequence()
+				# En esta secuencia, se está validando que al oprimir el click izquierdo y que la variable bandera esté verdadera, que entre a nuestra función de control de disparos, para controlar el flujo
 
-		if Input.is_action_pressed("ia_up"):
-			velocity.y = -TURBO
-			
-		elif Input.is_action_pressed("ia_down"):
-			velocity.y = -SPEED/2
+			if Input.is_action_pressed("ia_up"):
+				velocity.y = -TURBO
+				
+			elif Input.is_action_pressed("ia_down"):
+				velocity.y = -SPEED/2
 
-		if Input.is_action_pressed("ia_left"):
-			velocity.x = -TILT_SPEED
-			$AnimationPlayer.play("Left")
-		elif Input.is_action_pressed("ia_right"):
-			velocity.x = TILT_SPEED
-			$AnimationPlayer.play("Right")
-		else: 
-			velocity.x = 0
-			$AnimationPlayer.play("Idle")
+			if Input.is_action_pressed("ia_left"):
+				velocity.x = -TILT_SPEED
+				$AnimationPlayer.play("Left")
+			elif Input.is_action_pressed("ia_right"):
+				velocity.x = TILT_SPEED
+				$AnimationPlayer.play("Right")
+			else: 
+				velocity.x = 0
+				$AnimationPlayer.play("Idle")
 	move_and_slide()
 	
 	
@@ -69,7 +76,7 @@ func _on_timer_bar_time_to_die() -> void:
 	$AnimationPlayer.play("Death") 
 	#Hasta acá rodo escelente, is_dead es la variable que evita otros movimientos
 	var timer = Timer.new()
-	timer.wait_time=0.8
+	timer.wait_time=1.2
 	timer.connect("timeout", _on_timer_timeout)
 	add_child(timer)
 	timer.start()
@@ -81,12 +88,12 @@ func _on_timer_timeout():
 	
 func quit_timer():
 	var timer2 = Timer.new()
-	timer2.wait_time=0.5
+	timer2.wait_time=0.3
 	timer2.connect("timeout", _on_timer2_timeout)
 	add_child(timer2)
 	timer2.start()
 	var timer3 = Timer.new()
-	timer3.wait_time=1
+	timer3.wait_time=0.3
 	timer3.connect("timeout", _on_timer3_timeout)
 	add_child(timer3)
 	timer3.start()

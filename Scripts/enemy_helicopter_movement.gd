@@ -2,13 +2,21 @@ extends CharacterBody2D
 
 var direction = -1
 var speed = 40
+var hitbox = false
 
 func _physics_process(delta: float) -> void:
-	$AnimationPlayer.play("Idle")
+	if not hitbox:
+		$AnimationPlayer.play("Idle")
+	else:
+		velocity.y = 0
+		velocity.x = 0
+		$AnimationPlayer.play("Death")
+		quit_timer()
 
 func _process(delta: float) -> void:
-	move_enemies()
-	place()
+	if not hitbox:
+		move_enemies()
+		place()
 
 func move_enemies():
 	velocity.x = direction * speed
@@ -29,3 +37,13 @@ func adjust_raycast():
 	elif direction == -1:
 		$RayCast2D_Left.position.x = -22
 		$RayCast2D_Right.position.x = 41
+		
+func quit_timer():
+	var timer2 = Timer.new()
+	timer2.wait_time=1.2
+	timer2.connect("timeout", _on_timer2_timeout)
+	add_child(timer2)
+	timer2.start()
+	
+func _on_timer2_timeout():
+	queue_free()
