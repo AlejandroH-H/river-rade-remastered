@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var direction = -1
-var speed = 40
+var speed = 60
 var hitbox = false
 
 func _physics_process(delta: float) -> void:

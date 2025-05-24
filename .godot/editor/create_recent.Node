@@ -1,11 +1,12 @@
+Timer
 CollisionShape2D
 Area2D
+Node2D
+TileMapLayer
+TileMap
 Sprite2D
 CharacterBody2D
-Timer
 AnimationPlayer
 Line2D
 RayCast2D
-Node2D
-TileMap
 Camera2D

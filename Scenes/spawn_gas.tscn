@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpxlq5ke6rv7n"]
+
+[ext_resource type="Script" uid="uid://dck8t4uvb0xov" path="res://Scripts/spawn_gas.gd" id="1_7g8xx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5cq4c"]
+
+[node name="Spawn_Gas" type="Area2D"]
+script = ExtResource("1_7g8xx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5cq4c")
+
+[node name="cooldown" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]

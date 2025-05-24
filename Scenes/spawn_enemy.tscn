@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnnaptfshbilp"]
+
+[ext_resource type="Script" uid="uid://dk0ajxn34v0w8" path="res://Scripts/spawn_rider.gd" id="1_0ijro"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3eriu"]
+
+[node name="Spawn_Enemy" type="Area2D"]
+script = ExtResource("1_0ijro")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_3eriu")
+
+[node name="cooldown" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="timeout" from="cooldown" to="." method="_on_cooldown_timeout"]

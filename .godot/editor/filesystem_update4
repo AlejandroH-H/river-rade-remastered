@@ -1,10 +1,7 @@
-res://Chars&World/character_body_2d.tscn
-res://Chars&World/Level.tscn
-res://Chars&World/enemy_helicopter.tscn
-res://Scenes/fuelTank.tscn
-res://Scripts/raiderMovement.gd
-res://Scripts/hitbox.gd
-res://Chars&World/enemy_boat.tscn
-res://Scenes/bullet.gd
-res://Scripts/enemy_helicopter_movement.gd
-res://Scripts/enemy_boat_movement.gd
+res://Chars&World/level_one.tscn
+res://spawn_enemy.gd
+res://Scenes/spawn_enemy.tscn
+res://Scripts/spawn_boat.gd
+res://Scenes/spawn_boat.tscn
+res://Scripts/spawn_gas.gd
+res://Scenes/spawn_gas.tscn

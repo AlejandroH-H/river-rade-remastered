@@ -129,7 +129,7 @@ autostart = true
 
 [node name="TimerBar" type="Line2D" parent="."]
 position = Vector2(351, -71)
-points = PackedVector2Array(0, 0, 2.08189e-12, -100)
+points = PackedVector2Array(0, 0, 0, -100)
 width = 20.0
 default_color = Color(0.839216, 0.0470588, 0.0784314, 1)
 script = ExtResource("3_njlli")
