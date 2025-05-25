@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0m17s6g51vce"]
+[gd_scene load_steps=6 format=3 uid="uid://b0m17s6g51vce"]
 
 [ext_resource type="Texture2D" uid="uid://dxy53fxeje554" path="res://Textures/partsOfTheMap/Props/gas-tank.png" id="1_debyx"]
 [ext_resource type="Script" uid="uid://qtswirsc0gyt" path="res://Scripts/fuelTank.gd" id="2_hwqe1"]
+[ext_resource type="AudioStream" uid="uid://04flw03ylyh1" path="res://assets/public/Music/Guns&Items/fuel-_mp3cut.net_.mp3" id="3_oyj55"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hwqe1"]
 radius = 9.05539
@@ -22,6 +23,9 @@ shape = SubResource("CircleShape2D_hwqe1")
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-1, 2)
 script = ExtResource("2_hwqe1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Area2D"]
+stream = ExtResource("3_oyj55")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1, 2)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://ddqakknshcler"]
+[gd_scene load_steps=11 format=3 uid="uid://ddqakknshcler"]
 
 [ext_resource type="Script" uid="uid://gkgdvrwfcrhx" path="res://Scripts/enemy_boat_movement.gd" id="1_2seb3"]
 [ext_resource type="Texture2D" uid="uid://coqlgaos8vedd" path="res://Textures/Enemies/PNG/Boat1_water_animation_color2/Boat1_water_spritesheet.png" id="2_2seb3"]
-[ext_resource type="Script" uid="uid://bdjera6ic6kia" path="res://Scripts/hitbox.gd" id="2_hlq4p"]
+[ext_resource type="Script" uid="uid://bdjera6ic6kia" path="res://Scripts/hitbox.gd" id="3_xxrmw"]
+[ext_resource type="AudioStream" uid="uid://b7ndwrnro1gp3" path="res://assets/public/Music/Guns&Items/Retro-Explosion-Long-02.mp3" id="4_xxrmw"]
 
 [sub_resource type="Animation" id="Animation_xxrmw"]
 resource_name = "Death"
@@ -60,11 +61,11 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2seb3"]
-radius = 15.0
-height = 78.0
+radius = 14.0
+height = 72.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hlq4p"]
-size = Vector2(68.125, 29)
+size = Vector2(75, 28)
 
 [node name="Enemy_Boat" type="CharacterBody2D" groups=["Enemy"]]
 script = ExtResource("1_2seb3")
@@ -91,11 +92,15 @@ rotation = -1.5708
 shape = SubResource("CapsuleShape2D_2seb3")
 
 [node name="Area2D" type="Area2D" parent="."]
-script = ExtResource("2_hlq4p")
+script = ExtResource("3_xxrmw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-6.0625, 2.5)
+position = Vector2(-7.5, 2)
 shape = SubResource("RectangleShape2D_hlq4p")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Area2D"]
+stream = ExtResource("4_xxrmw")
+pitch_scale = 1.01
 
 [node name="RayCast2D_Left" type="RayCast2D" parent="."]
 position = Vector2(22, 30)

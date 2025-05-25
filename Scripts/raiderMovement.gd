@@ -10,18 +10,32 @@ var maxBullets = 5 #Variable que indica cuántas balas se pueden disparar
 var canShoot = true #Variable bandera que activa el uso de las balas
 var is_dead = false
 var hitbox = false
+var sound_played = false
+var sound_played2 = false
 
 func _ready():
 	$TimerBar.points[1].y = Global.line2d_y
 	#Esta es nuestra querida linea que permite que el timer sea el mismo entre escenas
 
+func death_sound():
+	if not sound_played:
+		$Death.play()
+		sound_played = true
+func death_sound2():
+	if not sound_played:
+		$Death2.play()
+		sound_played2 = true
+
 func _physics_process(delta: float) -> void:
 	
 	if hitbox:
+		
 		velocity.y = 0
 		velocity.x = 0
 		$AnimationPlayer.play("Death")
 		quit_timer()
+		death_sound()
+		
 	else:
 		if not is_dead:
 			velocity.y = -SPEED
@@ -52,6 +66,7 @@ func _physics_process(delta: float) -> void:
 func shootSequence():
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and bulletCount < maxBullets:
 		shoot()
+		$AudioStreamPlayer.play()
 		bulletCount += 1
 		$Timer.start()
 		await $Timer.timeout
@@ -76,10 +91,11 @@ func _on_timer_bar_time_to_die() -> void:
 	velocity.y = 0
 	velocity.x = 0
 	$AnimationPlayer.stop()
+	death_sound2()
 	$AnimationPlayer.play("Death") 
 	#Hasta acá rodo escelente, is_dead es la variable que evita otros movimientos
 	var timer = Timer.new()
-	timer.wait_time=1.2
+	timer.wait_time=0.3
 	timer.connect("timeout", _on_timer_timeout)
 	add_child(timer)
 	timer.start()
@@ -91,12 +107,12 @@ func _on_timer_timeout():
 	
 func quit_timer():
 	var timer2 = Timer.new()
-	timer2.wait_time=0.3
+	timer2.wait_time=1.2
 	timer2.connect("timeout", _on_timer2_timeout)
 	add_child(timer2)
 	timer2.start()
 	var timer3 = Timer.new()
-	timer3.wait_time=0.3
+	timer3.wait_time=1.2
 	timer3.connect("timeout", _on_timer3_timeout)
 	add_child(timer3)
 	timer3.start()

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dw2gl1qfwfjah"
+path="res://.godot/imported/Strike Force Heroes Music - Rose at Midnight.mp3-ad5ab09c4aeb8c0cef4b0fb5fa9c0e7e.mp3str"
+
+[deps]
+
+source_file="res://assets/public/Music/Strike Force Heroes Music - Rose at Midnight.mp3"
+dest_files=["res://.godot/imported/Strike Force Heroes Music - Rose at Midnight.mp3-ad5ab09c4aeb8c0cef4b0fb5fa9c0e7e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
