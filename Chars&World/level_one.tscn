@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bxd5ql27gu2mg"]
+[gd_scene load_steps=12 format=4 uid="uid://bxd5ql27gu2mg"]
 
 [ext_resource type="Texture2D" uid="uid://dp1dp0sk6m8kl" path="res://TileMaps/tileSetGrass/overworld_tileset_grass.png" id="1_5btaa"]
 [ext_resource type="PackedScene" uid="uid://bia656h0sjnan" path="res://Chars&World/character_body_2d.tscn" id="2_om4a6"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cpxlq5ke6rv7n" path="res://Scenes/spawn_gas.tscn" id="5_dcc1w"]
 [ext_resource type="PackedScene" uid="uid://b0m17s6g51vce" path="res://Scenes/fuelTank.tscn" id="5_dosvc"]
 [ext_resource type="PackedScene" uid="uid://dnnaptfshbilp" path="res://Scenes/spawn_enemy.tscn" id="5_om4a6"]
+[ext_resource type="Script" uid="uid://dbolmh60kwq0j" path="res://Scripts/Exit.gd" id="7_dcc1w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vcxu1"]
 texture = ExtResource("1_5btaa")
@@ -205,6 +206,9 @@ sources/1 = SubResource("TileSetAtlasSource_vcxu1")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_om4a6"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcc1w"]
+size = Vector2(473, 77.5)
+
 [node name="Level_One" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -232,3 +236,13 @@ scale = Vector2(0.625509, 0.623421)
 
 [node name="prueba_de_coords" type="Node2D" parent="."]
 position = Vector2(-170, -193)
+
+[node name="Exit" type="Area2D" parent="."]
+script = ExtResource("7_dcc1w")
+next_scene_path = "res://Chars&World/Level.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
+position = Vector2(1.49999, -1231.75)
+shape = SubResource("RectangleShape2D_dcc1w")
+
+[connection signal="body_entered" from="Exit" to="Exit" method="_on_body_entered"]
