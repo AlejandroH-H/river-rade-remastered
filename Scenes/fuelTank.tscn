@@ -9,7 +9,7 @@ radius = 9.05539
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oyj55"]
 size = Vector2(20, 28)
 
-[node name="fuelTank" type="CharacterBody2D"]
+[node name="fuelTank" type="CharacterBody2D" groups=["Items"]]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1

@@ -11,6 +11,9 @@ var canShoot = true #Variable bandera que activa el uso de las balas
 var is_dead = false
 var hitbox = false
 
+func _ready():
+	$TimerBar.points[1].y = Global.line2d_y
+	#Esta es nuestra querida linea que permite que el timer sea el mismo entre escenas
 
 func _physics_process(delta: float) -> void:
 	

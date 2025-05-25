@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="River Rade (Remastered)"
-run/main_scene="uid://5g2x7djaxohc"
+run/main_scene="uid://bxd5ql27gu2mg"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://Global.gd"
 
 [dotnet]
 
@@ -23,6 +27,7 @@ project/assembly_name="River Rade (Remastered)"
 
 Player=""
 Enemy=""
+Items=""
 
 [input]
 

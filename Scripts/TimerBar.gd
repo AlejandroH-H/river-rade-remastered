@@ -2,6 +2,8 @@ extends Line2D
 
 signal time_to_die
 
+
+
 func _decrease():
 	points[1].y += 10
 
@@ -11,6 +13,7 @@ func _is_time_to_die():
 	
 
 func _on_fuel_timeout() -> void:
+	
 	_decrease()
 	
 	if _is_time_to_die():

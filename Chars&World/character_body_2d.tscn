@@ -121,11 +121,17 @@ speed_scale = 1.5
 zoom = Vector2(1.5, 1.5)
 
 [node name="SpawnPoint" type="Node2D" parent="."]
-position = Vector2(-81, -86)
+position = Vector2(2.08189e-12, -47)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.5
 autostart = true
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(351, -71)
+points = PackedVector2Array(0, 0, 2.08189e-12, -100)
+width = 20.0
+default_color = Color(0, 0, 0, 1)
 
 [node name="TimerBar" type="Line2D" parent="."]
 position = Vector2(351, -71)
@@ -135,7 +141,7 @@ default_color = Color(0.839216, 0.0470588, 0.0784314, 1)
 script = ExtResource("3_njlli")
 
 [node name="Fuel" type="Timer" parent="TimerBar"]
-wait_time = 2.0
+wait_time = 4.0
 autostart = true
 
 [connection signal="time_to_die" from="TimerBar" to="." method="_on_timer_bar_time_to_die"]
