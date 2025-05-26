@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cyas2s48mh31p"]
+[gd_scene load_steps=11 format=3 uid="uid://cyas2s48mh31p"]
 
 [ext_resource type="Script" uid="uid://bk62pskjfu0uj" path="res://Scripts/enemy_helicopter_movement.gd" id="1_4vct5"]
 [ext_resource type="Texture2D" uid="uid://cf6qjg0n1faf7" path="res://Textures/Enemies/PNG/Helicopter/Helicopter_Sheet.png" id="2_4vct5"]
 [ext_resource type="Script" uid="uid://bdjera6ic6kia" path="res://Scripts/hitbox.gd" id="3_xa885"]
+[ext_resource type="AudioStream" uid="uid://bsqlaf6hvvbot" path="res://assets/public/Music/Guns&Items/Retro-Explosion-Short-01.mp3" id="4_0orc0"]
 
 [sub_resource type="Animation" id="Animation_xxrmw"]
 resource_name = "Death"
@@ -100,6 +101,9 @@ script = ExtResource("3_xa885")
 position = Vector2(-1076, 175)
 rotation = 1.53164
 shape = SubResource("CapsuleShape2D_0orc0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Area2D"]
+stream = ExtResource("4_0orc0")
 
 [node name="RayCast2D_Left" type="RayCast2D" parent="."]
 position = Vector2(22, 48)

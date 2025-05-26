@@ -1,5 +1,6 @@
-[gd_scene load_steps=13 format=3 uid="uid://5g2x7djaxohc"]
+[gd_scene load_steps=14 format=3 uid="uid://5g2x7djaxohc"]
 
+[ext_resource type="Script" uid="uid://i3bhmd4jbbq5" path="res://Scripts/level_music&stuff.gd" id="1_hbxt5"]
 [ext_resource type="Texture2D" uid="uid://543ww3us3avd" path="res://TileMaps/tileSetGrass/preview.png" id="1_i3x0a"]
 [ext_resource type="PackedScene" uid="uid://bia656h0sjnan" path="res://Chars&World/character_body_2d.tscn" id="2_vryhi"]
 [ext_resource type="Texture2D" uid="uid://b8nqtjjlsoukw" path="res://TileMaps/tileSetWall/galletcity.png" id="3_2iw87"]
@@ -2125,6 +2126,7 @@ size = Vector2(404, 26)
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(81, 55)
+script = ExtResource("1_hbxt5")
 
 [node name="TileMap" type="TileMap" parent="."]
 texture_filter = 1

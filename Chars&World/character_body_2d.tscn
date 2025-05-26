@@ -1,8 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bia656h0sjnan"]
+[gd_scene load_steps=14 format=3 uid="uid://bia656h0sjnan"]
 
 [ext_resource type="Script" uid="uid://blfxxut2subhy" path="res://Scripts/raiderMovement.gd" id="1_x0dcs"]
 [ext_resource type="Texture2D" uid="uid://c5nwod7as3gce" path="res://Textures/Planes/main_ship-spritesheet.png" id="2_njlli"]
 [ext_resource type="Script" uid="uid://b4ksibp6ixjuj" path="res://Scripts/TimerBar.gd" id="3_njlli"]
+[ext_resource type="AudioStream" uid="uid://c8gu7vmjyc1jq" path="res://assets/public/Music/Guns&Items/Retro-Missile-Launcher-01.mp3" id="4_f6kfu"]
+[ext_resource type="AudioStream" uid="uid://bsqlaf6hvvbot" path="res://assets/public/Music/Guns&Items/Retro-Explosion-Short-01.mp3" id="5_tjf25"]
+[ext_resource type="AudioStream" uid="uid://sc6t1wp1t3pj" path="res://assets/public/Music/Guns&Items/Retro-Explosion-Swoshes-04.mp3" id="6_7x1n0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0dcs"]
 size = Vector2(17, 37)
@@ -143,6 +146,16 @@ script = ExtResource("3_njlli")
 [node name="Fuel" type="Timer" parent="TimerBar"]
 wait_time = 4.0
 autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_f6kfu")
+volume_db = -5.032
+
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_tjf25")
+
+[node name="Death2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_7x1n0")
 
 [connection signal="time_to_die" from="TimerBar" to="." method="_on_timer_bar_time_to_die"]
 [connection signal="timeout" from="TimerBar/Fuel" to="TimerBar" method="_on_fuel_timeout"]

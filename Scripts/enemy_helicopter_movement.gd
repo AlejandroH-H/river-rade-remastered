@@ -3,11 +3,19 @@ extends CharacterBody2D
 var direction = -1
 var speed = 80
 var hitbox = false
+var sound_played = false
+@onready var player = $Area2D/AudioStreamPlayer
+
+func death_sound():
+	if not sound_played:
+		player.play()
+		sound_played = true
 
 func _physics_process(delta: float) -> void:
 	if not hitbox:
 		$AnimationPlayer.play("Idle")
 	else:
+		death_sound()
 		velocity.y = 0
 		velocity.x = 0
 		$AnimationPlayer.play("Death")

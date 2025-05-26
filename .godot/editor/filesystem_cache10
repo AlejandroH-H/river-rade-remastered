@@ -1,39 +1,56 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1748128724
+::res://::1748213666
+Global.gd::GDScript::1393579072342275253::1748213483::0::1::::<>Node<><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::7482147990888647328::1747174769::1747504627::1::::<><><>0<>0<>ec382b76b68e215288a479bce15452a1<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-README.md::TextFile::-1::1747770601::0::1::::<><><>0<>0<><>::
+README.md::TextFile/TextFile::-1::1747770601::0::1::::<><><>0<>0<><>::
+audio_player.gd::GDScript::4409811308017025435::1748213666::0::1::::<>AudioStreamPlayer<><>0<>0<><>::
 ::res://assets/::1747708760
-::res://assets/public/::1747708760
+::res://assets/public/::1748191066
 ::res://assets/public/img/::1747770886
 clasicRiver.jpeg::CompressedTexture2D/CompressedTexture2D::4712082678700067698::1747708760::1747708844::1::::<><><>0<>0<>6ccb5386a9c04aede651d20308f2fe1c<>res://.godot/imported/clasicRiver.jpeg-e426724252a48c52a9e899329684586e.ctex::
 NewRiver.jpg::CompressedTexture2D/CompressedTexture2D::9007607412797216669::1747770601::1747770886::1::::<><><>0<>0<>f662810640243fb343b84e50e45fba61<>res://.godot/imported/NewRiver.jpg-3a04d402e77487009d29836634a6a459.ctex::
-::res://Chars&World/::1748128435
-character_body_2d.tscn::PackedScene::2949868873588061193::1748128435::0::1::::<><><>0<>0<><>::uid://blfxxut2subhy::::res://Scripts/raiderMovement.gd<>uid://c5nwod7as3gce::::res://Textures/Planes/main_ship-spritesheet.png<>uid://b4ksibp6ixjuj::::res://Scripts/TimerBar.gd
-enemy_boat.tscn::PackedScene::7402877030140648005::1747953779::0::1::::<><><>0<>0<><>::uid://gkgdvrwfcrhx::::res://Scripts/enemy_boat_movement.gd<>uid://coqlgaos8vedd::::res://Textures/Enemies/PNG/Boat1_water_animation_color2/Boat1_water_spritesheet.png<>uid://bdjera6ic6kia::::res://Scripts/hitbox.gd
-enemy_helicopter.tscn::PackedScene::6458515728739551947::1747953779::0::1::::<><><>0<>0<><>::uid://bk62pskjfu0uj::::res://Scripts/enemy_helicopter_movement.gd<>uid://cf6qjg0n1faf7::::res://Textures/Enemies/PNG/Helicopter/Helicopter_Sheet.png<>uid://bdjera6ic6kia::::res://Scripts/hitbox.gd
-Level.tscn::PackedScene::2119733693521294400::1747953778::0::1::::<><><>0<>0<><>::uid://543ww3us3avd::::res://TileMaps/tileSetGrass/preview.png<>uid://bia656h0sjnan::::res://Chars&World/character_body_2d.tscn<>uid://b8nqtjjlsoukw::::res://TileMaps/tileSetWall/galletcity.png<>uid://ddqakknshcler::::res://Chars&World/enemy_boat.tscn<>uid://bdjera6ic6kia::::res://Scripts/hitbox.gd<>uid://cyas2s48mh31p::::res://Chars&World/enemy_helicopter.tscn<>uid://b0m17s6g51vce::::res://Scenes/fuelTank.tscn
-level_one.tscn::PackedScene::4008807924044837578::1748128435::0::1::::<><><>0<>0<><>::uid://dp1dp0sk6m8kl::::res://TileMaps/tileSetGrass/overworld_tileset_grass.png<>uid://bia656h0sjnan::::res://Chars&World/character_body_2d.tscn<>uid://b30efuk4uxj12::::res://Scenes/spawn_boat.tscn<>uid://cpxlq5ke6rv7n::::res://Scenes/spawn_gas.tscn<>uid://b0m17s6g51vce::::res://Scenes/fuelTank.tscn<>uid://dnnaptfshbilp::::res://Scenes/spawn_enemy.tscn
-::res://Scenes/::1748128435
-bullet.gd::GDScript::7214596415504859145::1747952019::0::1::::<>CharacterBody2D<><>0<>0<><>::
-bullet.tscn::PackedScene::2340135730643787142::1747860076::0::1::::<><><>0<>0<><>::uid://da12l4lcqcrfl::::res://Scenes/bullet.gd<>uid://w3c713qqyptc::::res://Textures/Planes/Explosion/explosion-5.png
-fuelTank.tscn::PackedScene::4167551088532501068::1747953779::0::1::::<><><>0<>0<><>::uid://dxy53fxeje554::::res://Textures/partsOfTheMap/Props/gas-tank.png<>uid://qtswirsc0gyt::::res://Scripts/fuelTank.gd
-spawn_boat.tscn::PackedScene::4403570613610408907::1748128435::0::1::::<><><>0<>0<><>::uid://bepe471q40kvo::::res://Scripts/spawn_boat.gd
-spawn_enemy.tscn::PackedScene::8098581722579990429::1748128435::0::1::::<><><>0<>0<><>::uid://dk0ajxn34v0w8::::res://Scripts/spawn_rider.gd
-spawn_gas.tscn::PackedScene::5873852761295382297::1748128435::0::1::::<><><>0<>0<><>::uid://dck8t4uvb0xov::::res://Scripts/spawn_gas.gd
-::res://Scripts/::1748128435
-enemy_boat_movement.gd::GDScript::442147628965493161::1748128435::0::1::::<>CharacterBody2D<><>0<>0<><>::
-enemy_helicopter_movement.gd::GDScript::3153971937447308837::1748128435::0::1::::<>CharacterBody2D<><>0<>0<><>::
-fuelTank.gd::GDScript::1163377316141334851::1747876598::0::1::::<>Area2D<><>0<>0<><>::
-hitbox.gd::GDScript::2615839889117508496::1747948544::0::1::::<>Area2D<><>0<>0<><>::
-raiderMovement.gd::GDScript::3170258497645082218::1747948768::0::1::::<>CharacterBody2D<><>0<>0<><>::
-spawn_boat.gd::GDScript::2698438102229269912::1748128435::0::1::::<>Area2D<><>0<>0<><>::
-spawn_gas.gd::GDScript::7322322661771184453::1748128435::0::1::::<>Area2D<><>0<>0<><>::
-spawn_rider.gd::GDScript::7912777232887576873::1748128435::0::1::::<>Area2D<><>0<>0<><>::
-TimerBar.gd::GDScript::4443648196073193773::1747875511::0::1::::<>Line2D<><>0<>0<><>::
+::res://assets/public/Music/::1748213954
+Raze 2 Music - Warhead.mp3::AudioStreamMP3/AudioStreamMP3::1110172455736501657::1748190646::1748191069::1::::<><><>0<>0<>d7c4604dd881c36f4a73d7e13b558977<>res://.godot/imported/Raze 2 Music - Warhead.mp3-8df2d1b51140db83f6ee2e5e97f970fa.mp3str::
+Strike Force Heroes Music - Rose at Midnight.mp3::AudioStreamMP3::8759540146745940051::1748213943::1748213956::1::::<><><>0<>0<>8189329290ebb597bdb266cbef7eacc1<>res://.godot/imported/Strike Force Heroes Music - Rose at Midnight.mp3-ad5ab09c4aeb8c0cef4b0fb5fa9c0e7e.mp3str::
+::res://assets/public/Music/Guns&Items/::1748196920
+fuel-_mp3cut.net_.mp3::AudioStreamMP3/AudioStreamMP3::1814912469953867136::1748196871::1748196919::1::::<><><>0<>0<>27d2d2414dd5391e09ae96cb8ea18631<>res://.godot/imported/fuel-_mp3cut.net_.mp3-77503aaea956ccf06a4228ad6e09f26c.mp3str::
+Retro-Charge-Off-11.mp3::AudioStreamMP3/AudioStreamMP3::8711699309539798265::1748196845::1748196920::1::::<><><>0<>0<>1de9196ae1cd04ff1ee7987bb6760903<>res://.godot/imported/Retro-Charge-Off-11.mp3-2f0e579d0392c610043d545051ae4275.mp3str::
+Retro-Explosion-Long-02.mp3::AudioStreamMP3/AudioStreamMP3::4659522943128671682::1748196844::1748196920::1::::<><><>0<>0<>54a140f19ee76cb239c34f1f4c255850<>res://.godot/imported/Retro-Explosion-Long-02.mp3-819904a9d452088dda02f306038cbf1e.mp3str::
+Retro-Explosion-Short-01.mp3::AudioStreamMP3/AudioStreamMP3::3683518111015697163::1748196615::1748196920::1::::<><><>0<>0<>b86da656de5de76a65c4b8edcd4951dd<>res://.godot/imported/Retro-Explosion-Short-01.mp3-8bc4fe98fb6a1f4e8a4a2e6eb792bdca.mp3str::
+Retro-Explosion-Short-15.mp3::AudioStreamMP3/AudioStreamMP3::1790467153812013691::1748196613::1748196920::1::::<><><>0<>0<>d9c7fef2915d71d61e201a1e040b68df<>res://.godot/imported/Retro-Explosion-Short-15.mp3-2e3ecfd00bcb1e6c412efcc4d56d498c.mp3str::
+Retro-Explosion-Swoshes-04.mp3::AudioStreamMP3/AudioStreamMP3::1269445498162512527::1748196592::1748196920::1::::<><><>0<>0<>100734358a4a8b56d26ec9cedc2d97d5<>res://.godot/imported/Retro-Explosion-Swoshes-04.mp3-738ff443916b19cdfa282f803b7d7638.mp3str::
+Retro-Missile-Launcher-01.mp3::AudioStreamMP3/AudioStreamMP3::7102732081195021274::1748196591::1748196920::1::::<><><>0<>0<>f5047c5f8214c853c01e32924d32d09d<>res://.godot/imported/Retro-Missile-Launcher-01.mp3-89632a2eef00e3af22e764c75e6500cd.mp3str::
+::res://Chars&World/::1748213732
+character_body_2d.tscn::PackedScene::2949868873588061193::1748213732::0::1::::<><><>0<>0<><>::uid://blfxxut2subhy::::res://Scripts/raiderMovement.gd<>uid://c5nwod7as3gce::::res://Textures/Planes/main_ship-spritesheet.png<>uid://b4ksibp6ixjuj::::res://Scripts/TimerBar.gd<>uid://c8gu7vmjyc1jq::::res://assets/public/Music/Guns&Items/Retro-Missile-Launcher-01.mp3<>uid://bsqlaf6hvvbot::::res://assets/public/Music/Guns&Items/Retro-Explosion-Short-01.mp3
+enemy_boat.tscn::PackedScene::7402877030140648005::1748213732::0::1::::<><><>0<>0<><>::uid://gkgdvrwfcrhx::::res://Scripts/enemy_boat_movement.gd<>uid://coqlgaos8vedd::::res://Textures/Enemies/PNG/Boat1_water_animation_color2/Boat1_water_spritesheet.png<>uid://bdjera6ic6kia::::res://Scripts/hitbox.gd<>uid://b7ndwrnro1gp3::::res://assets/public/Music/Guns&Items/Retro-Explosion-Long-02.mp3
+enemy_helicopter.tscn::PackedScene::6458515728739551947::1748213732::0::1::::<><><>0<>0<><>::uid://bk62pskjfu0uj::::res://Scripts/enemy_helicopter_movement.gd<>uid://cf6qjg0n1faf7::::res://Textures/Enemies/PNG/Helicopter/Helicopter_Sheet.png<>uid://bdjera6ic6kia::::res://Scripts/hitbox.gd<>uid://bsqlaf6hvvbot::::res://assets/public/Music/Guns&Items/Retro-Explosion-Short-01.mp3
+Level.tscn::PackedScene::2119733693521294400::1748213731::0::1::::<><><>0<>0<><>::uid://i3bhmd4jbbq5::::res://Scripts/level_music&stuff.gd<>uid://543ww3us3avd::::res://TileMaps/tileSetGrass/preview.png<>uid://bia656h0sjnan::::res://Chars&World/character_body_2d.tscn<>uid://b8nqtjjlsoukw::::res://TileMaps/tileSetWall/galletcity.png<>uid://ddqakknshcler::::res://Chars&World/enemy_boat.tscn<>uid://bdjera6ic6kia::::res://Scripts/hitbox.gd<>uid://cyas2s48mh31p::::res://Chars&World/enemy_helicopter.tscn<>uid://b0m17s6g51vce::::res://Scenes/fuelTank.tscn
+level_one.tscn::PackedScene::4008807924044837578::1748213732::0::1::::<><><>0<>0<><>::uid://dp1dp0sk6m8kl::::res://TileMaps/tileSetGrass/overworld_tileset_grass.png<>uid://i3bhmd4jbbq5::::res://Scripts/level_music&stuff.gd<>uid://bia656h0sjnan::::res://Chars&World/character_body_2d.tscn<>uid://b30efuk4uxj12::::res://Scenes/spawn_boat.tscn<>uid://cpxlq5ke6rv7n::::res://Scenes/spawn_gas.tscn<>uid://b0m17s6g51vce::::res://Scenes/fuelTank.tscn<>uid://dnnaptfshbilp::::res://Scenes/spawn_enemy.tscn<>uid://dbolmh60kwq0j::::res://Scripts/Exit.gd
+::res://Scenes/::1748213733
+bullet.gd::GDScript::7214596415504859145::1748211366::0::1::::<>CharacterBody2D<><>0<>0<><>::
+bullet.tscn::PackedScene::2340135730643787142::1748213732::0::1::::<><><>0<>0<><>::uid://da12l4lcqcrfl::::res://Scenes/bullet.gd<>uid://w3c713qqyptc::::res://Textures/Planes/Explosion/explosion-5.png
+fuelTank.tscn::PackedScene::4167551088532501068::1748213732::0::1::::<><><>0<>0<><>::uid://dxy53fxeje554::::res://Textures/partsOfTheMap/Props/gas-tank.png<>uid://qtswirsc0gyt::::res://Scripts/fuelTank.gd<>uid://04flw03ylyh1::::res://assets/public/Music/Guns&Items/fuel-_mp3cut.net_.mp3
+audio_player.tscn::PackedScene::786801755045534184::1748213733::0::1::::<><><>0<>0<><>::uid://b33e7h3xe0dqh::::res://audio_player.gd
+spawn_boat.tscn::PackedScene/PackedScene::4403570613610408907::1748128435::0::1::::<><><>0<>0<><>::uid://bepe471q40kvo::::res://Scripts/spawn_boat.gd
+spawn_enemy.tscn::PackedScene::8098581722579990429::1748213732::0::1::::<><><>0<>0<><>::uid://dk0ajxn34v0w8::::res://Scripts/spawn_rider.gd
+spawn_gas.tscn::PackedScene/PackedScene::5873852761295382297::1748128435::0::1::::<><><>0<>0<><>::uid://dck8t4uvb0xov::::res://Scripts/spawn_gas.gd
+::res://Scripts/::1748213451
+enemy_boat_movement.gd::GDScript::442147628965493161::1748207854::0::1::::<>CharacterBody2D<><>0<>0<><>::
+enemy_helicopter_movement.gd::GDScript::3153971937447308837::1748208272::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Enemy_hitbox.gd::GDScript::8165538789392698842::1748203127::0::1::::<>Area2D<><>0<>0<><>::
+Exit.gd::GDScript/GDScript::7259041916423983179::1748146508::0::1::::<>Area2D<><>0<>0<><>::
+fuelTank.gd::GDScript::1163377316141334851::1748212027::0::1::::<>Area2D<><>0<>0<><>::
+hitbox.gd::GDScript/GDScript::2615839889117508496::1747948544::0::1::::<>Area2D<><>0<>0<><>::
+level_music&stuff.gd::GDScript::619387180012343866::1748213451::0::1::::<>Node2D<><>0<>0<><>::
+raiderMovement.gd::GDScript::3170258497645082218::1748207453::0::1::::<>CharacterBody2D<><>0<>0<><>::
+spawn_boat.gd::GDScript/GDScript::2698438102229269912::1748128435::0::1::::<>Area2D<><>0<>0<><>::
+spawn_gas.gd::GDScript/GDScript::7322322661771184453::1748128435::0::1::::<>Area2D<><>0<>0<><>::
+spawn_rider.gd::GDScript/GDScript::7912777232887576873::1748128435::0::1::::<>Area2D<><>0<>0<><>::
+TimerBar.gd::GDScript/GDScript::4443648196073193773::1748146509::0::1::::<>Line2D<><>0<>0<><>::
 ::res://Textures/::1747174769
 ::res://Textures/Enemies/::1747174769
-License.txt::TextFile::-1::1747174768::0::1::::<><><>0<>0<><>::
-readme.txt::TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
+License.txt::TextFile/TextFile::-1::1747174768::0::1::::<><><>0<>0<><>::
+readme.txt::TextFile/TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
 ::res://Textures/Enemies/PNG/::1747864484
 Source.png::CompressedTexture2D/CompressedTexture2D::6478726994008030354::1747174769::1747504623::1::::<><><>0<>0<>eee824e450a6b67006ba097c2202feaa<>res://.godot/imported/Source.png-a24e08c937a7405d2ac941d5c2fcef38.ctex::
 Source_color2.png::CompressedTexture2D/CompressedTexture2D::2847146259144624663::1747174769::1747504623::1::::<><><>0<>0<>d57625fe1aad7c87c18c6e04d175324b<>res://.godot/imported/Source_color2.png-aa34e367607c3566a41085334791636c.ctex::
@@ -317,8 +334,8 @@ tile_0099_water26.png::CompressedTexture2D/CompressedTexture2D::5758280367473260
 tile_0100_water27.png::CompressedTexture2D/CompressedTexture2D::5940521387739472429::1747174769::1747504623::1::::<><><>0<>0<>7b6349e385a821c8b3b195e7ae43a26e<>res://.godot/imported/tile_0100_water27.png-152dab4ec08e38f698f600342b2dc199.ctex::
 tile_0101_water28.png::CompressedTexture2D/CompressedTexture2D::4152499262131279244::1747174769::1747504623::1::::<><><>0<>0<>37e93084ecdb8767019281f9ba07f0d0<>res://.godot/imported/tile_0101_water28.png-8e801b875b62ed95a6305043268fa564.ctex::
 ::res://Textures/partsOfTheMap/::1747174769
-Extras credit.txt::TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
-LICENSE.txt::TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
+Extras credit.txt::TextFile/TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
+LICENSE.txt::TextFile/TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
 ::res://Textures/partsOfTheMap/Cars/::1747504622
 NPC_cars (16 x 16).png::CompressedTexture2D/CompressedTexture2D::1100453916365428820::1747174769::1747504622::1::::<><><>0<>0<>b2afa8c614deb55fc8e10a1012b5d463<>res://.godot/imported/NPC_cars (16 x 16).png-fd9f9484a2cad30e6b9531b6fa0b1c96.ctex::
 Player_blue (16 x 16).png::CompressedTexture2D/CompressedTexture2D::6023099232166625107::1747174769::1747504622::1::::<><><>0<>0<>53fd26ee7bd0d898cd928dc6e9366fa9<>res://.godot/imported/Player_blue (16 x 16).png-b7820cc96d0ee30bbf5a00ac8b5dcc3c.ctex::
@@ -358,7 +375,7 @@ Player_arrow_indicator (8 x 8).png::CompressedTexture2D/CompressedTexture2D::788
 Race_progress (8 x 8).png::CompressedTexture2D/CompressedTexture2D::1697028968407066493::1747174769::1747504628::1::::<><><>0<>0<>e160b8d6b6f39d1d20e43e31cc368e0a<>res://.godot/imported/Race_progress (8 x 8).png-01cd394885970825e87ae280f7e34af9.ctex::
 Speed_indicator_numbers (8 x 8).png::CompressedTexture2D/CompressedTexture2D::6924816925049181836::1747174769::1747504628::1::::<><><>0<>0<>fd044afe3a144ad70525182934423028<>res://.godot/imported/Speed_indicator_numbers (8 x 8).png-4b9cc978ba720feadb65bc5a3143d82d.ctex::
 ::res://Textures/Planes/::1747944365
-_Readme.txt::TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
+_Readme.txt::TextFile/TextFile::-1::1747174769::0::1::::<><><>0<>0<><>::
 blue_01.png::CompressedTexture2D/CompressedTexture2D::176337882961830375::1747174769::1747504629::1::::<><><>0<>0<>08950336f970aae63dc8aa947cb4bd8a<>res://.godot/imported/blue_01.png-c23216b781097ee41039c62c658a4100.ctex::
 darkgrey_02.png::CompressedTexture2D/CompressedTexture2D::5164723675912971239::1747174769::1747504629::1::::<><><>0<>0<>a5ae86ed067f8d744b6a311b25f6cf08<>res://.godot/imported/darkgrey_02.png-359b7943843cd9ffe5359d9b418f67e9.ctex::
 enemy_1_1.png::CompressedTexture2D/CompressedTexture2D::101972866128613140::1747174769::1747504629::1::::<><><>0<>0<>d46e2e048279bcf9d90d44324f91b38b<>res://.godot/imported/enemy_1_1.png-3eb83233d4a90ee2e1e8328bc0d29835.ctex::
