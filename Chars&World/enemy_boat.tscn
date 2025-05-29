@@ -103,12 +103,12 @@ stream = ExtResource("4_xxrmw")
 pitch_scale = 1.01
 
 [node name="RayCast2D_Left" type="RayCast2D" parent="."]
-position = Vector2(22, 30)
+position = Vector2(28, 22)
 rotation = -6.28331
 target_position = Vector2(-78, -0.0100555)
 
 [node name="RayCast2D_Right" type="RayCast2D" parent="."]
-position = Vector2(-38, -34)
+position = Vector2(-43, -17)
 target_position = Vector2(79, 0)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

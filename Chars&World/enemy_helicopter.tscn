@@ -66,7 +66,7 @@ height = 57.7012
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0orc0"]
 radius = 9.03225
-height = 62.1093
+height = 56.1137
 
 [node name="Enemy_Helicopter" type="CharacterBody2D" groups=["Enemy"]]
 position = Vector2(7, -30)
@@ -98,7 +98,7 @@ position = Vector2(1071, -143)
 script = ExtResource("3_xa885")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1076, 175)
+position = Vector2(-1078, 175)
 rotation = 1.53164
 shape = SubResource("CapsuleShape2D_0orc0")
 
@@ -106,12 +106,12 @@ shape = SubResource("CapsuleShape2D_0orc0")
 stream = ExtResource("4_0orc0")
 
 [node name="RayCast2D_Left" type="RayCast2D" parent="."]
-position = Vector2(22, 48)
+position = Vector2(20, 48)
 rotation = -1.5708
-target_position = Vector2(0.000242233, -67)
+target_position = Vector2(0.000213623, -59)
 
 [node name="RayCast2D_Right" type="RayCast2D" parent="."]
-position = Vector2(-41, 13)
-target_position = Vector2(73, 0)
+position = Vector2(-36, 15)
+target_position = Vector2(61, 0)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://Global.gd"
-AudioPlayer="*res://audio_player.gd"
+Global="*res://Scripts/Global.gd"
+AudioPlayer="*res://Scripts/audio_player.gd"
 
 [dotnet]
 

@@ -2148,14 +2148,14 @@ position = Vector2(-30, -292)
 [node name="Enemy_Helicopter" parent="." instance=ExtResource("5_cjta5")]
 position = Vector2(-18, -233)
 
+[node name="fuelTank" parent="." instance=ExtResource("7_eryi1")]
+position = Vector2(19, -390)
+
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("4_ibwqx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(48, -682)
 shape = SubResource("RectangleShape2D_d51wo")
-
-[node name="fuelTank" parent="Area2D" instance=ExtResource("7_eryi1")]
-position = Vector2(19, -390)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

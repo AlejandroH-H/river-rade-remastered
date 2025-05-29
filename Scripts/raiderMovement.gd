@@ -13,6 +13,8 @@ var hitbox = false
 var sound_played = false
 var sound_played2 = false
 
+const WALL_TILE_IDS = [1]
+
 func _ready():
 	$TimerBar.points[1].y = Global.line2d_y
 	#Esta es nuestra querida linea que permite que el timer sea el mismo entre escenas
@@ -27,6 +29,22 @@ func death_sound2():
 		sound_played2 = true
 
 func _physics_process(delta: float) -> void:
+	
+	
+
+	
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+
+		if collision.get_collider() is TileMapLayer:
+			var tilemap = collision.get_collider()
+			var tile_coords = tilemap.local_to_map(collision.get_position())
+			var tile_id = tilemap.get_cell_source_id(tile_coords)
+
+			if tile_id in WALL_TILE_IDS:
+				print("Colisión con pared detectada (tile ID:", tile_id, ")")
+				die()
+
 	
 	if hitbox:
 		
@@ -60,7 +78,10 @@ func _physics_process(delta: float) -> void:
 			else: 
 				velocity.x = 0
 				$AnimationPlayer.play("Idle")
+	
+	
 	move_and_slide()
+	
 	
 	
 func shootSequence():
@@ -122,6 +143,14 @@ func _on_timer2_timeout():
 func _on_timer3_timeout():
 	get_tree().quit()
 	
+func die():
+	if not is_dead:  # Previene que muera múltiples veces
+		is_dead = true
+		hitbox = true
+		velocity = Vector2.ZERO
+		$AnimationPlayer.play("Death")
+		quit_timer()
+		death_sound()
 	
 	#_animation_finished()
 	#$AnimationPlayer.connect("animation_finished", Callable(self, "_on_animation_player_animation_finished"))
