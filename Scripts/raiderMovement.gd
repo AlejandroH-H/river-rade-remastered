@@ -12,12 +12,18 @@ var is_dead = false
 var hitbox = false
 var sound_played = false
 var sound_played2 = false
-
+var scene_name
 const WALL_TILE_IDS = [1]
 
 func _ready():
-	$TimerBar.points[1].y = Global.line2d_y
+	scene_name = get_tree().current_scene.name
+	if scene_name == "Boss_Fight":
+		$HUD/LivesContainer/TimerBar.points[1].y = -100
+		$HUD/LivesContainer/TimerBar/Fuel.stop()
+	else:
+		$HUD/LivesContainer/TimerBar.points[1].y = Global.line2d_y
 	#Esta es nuestra querida linea que permite que el timer sea el mismo entre escenas
+	$HUD.update_lives(Global.player_lives)
 
 func death_sound():
 	if not sound_played:
@@ -56,7 +62,10 @@ func _physics_process(delta: float) -> void:
 		
 	else:
 		if not is_dead:
-			velocity.y = -SPEED
+			if scene_name == "Boss_Fight":
+				velocity.y = 0
+			else:
+				velocity.y = -SPEED
 			if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and canShoot:
 				canShoot = false
 				bulletCount = 0
@@ -64,10 +73,16 @@ func _physics_process(delta: float) -> void:
 				# En esta secuencia, se está validando que al oprimir el click izquierdo y que la variable bandera esté verdadera, que entre a nuestra función de control de disparos, para controlar el flujo
 
 			if Input.is_action_pressed("ia_up"):
-				velocity.y = -TURBO
+				if scene_name == "Boss_Fight":
+					velocity.y = 0
+				else:
+					velocity.y = -TURBO
 				
 			elif Input.is_action_pressed("ia_down"):
-				velocity.y = -SPEED/2
+				if scene_name == "Boss_Fight":
+					velocity.y = 0
+				else:
+					velocity.y = -SPEED/2
 
 			if Input.is_action_pressed("ia_left"):
 				velocity.x = -TILT_SPEED
@@ -141,7 +156,11 @@ func quit_timer():
 func _on_timer2_timeout():
 	$Sprite2D.hide()
 func _on_timer3_timeout():
-	get_tree().quit()
+	Global.player_lives -= 1
+	if Global.player_lives <= 0:
+		get_tree().change_scene_to_file("res://Scenes/game_over.tscn")
+	else:
+		Global.reset_level()
 	
 func die():
 	if not is_dead:  # Previene que muera múltiples veces

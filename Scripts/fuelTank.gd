@@ -12,17 +12,18 @@ func _on_body_entered(body: Node2D) -> void:
 		player.play()
 		player.connect("finished", _on_audio_finished)
 		if player_scene:
-			if player_scene.get_node("TimerBar").points[1].y >= -80:
-				player_scene.get_node("TimerBar").points[1].y -=20
+			if player_scene.get_node("HUD/LivesContainer/TimerBar").points[1].y >= -80:
+				player_scene.get_node("HUD/LivesContainer/TimerBar").points[1].y -=20
 				#queue_free()
-			elif player_scene.get_node("TimerBar").points[1].y == -90:
-				player_scene.get_node("TimerBar").points[1].y -=10
+			elif player_scene.get_node("HUD/LivesContainer/TimerBar").points[1].y == -90:
+				player_scene.get_node("HUD/LivesContainer/TimerBar").points[1].y -=10
 				#queue_free()
 			else:
-				player_scene.get_node("TimerBar").points[1].y -=0
+				player_scene.get_node("HUD/LivesContainer/TimerBar").points[1].y -=0
 			#queue_free()
 		sprite.hide()
-		colision.queue_free()
+		if is_instance_valid(colision):
+				colision.queue_free()
 	
 func _on_audio_finished():
 	parent = get_parent()

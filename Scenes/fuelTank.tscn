@@ -11,6 +11,7 @@ radius = 9.05539
 size = Vector2(20, 28)
 
 [node name="fuelTank" type="CharacterBody2D" groups=["Items"]]
+collision_layer = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
