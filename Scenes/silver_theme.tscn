@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://75u14exh4apl"]
+
+[ext_resource type="Script" uid="uid://cjhxo7rb2kiee" path="res://Scripts/silver_theme.gd" id="1_bhyp0"]
+
+[node name="Silver_Theme" type="AudioStreamPlayer" groups=["Audio"]]
+script = ExtResource("1_bhyp0")

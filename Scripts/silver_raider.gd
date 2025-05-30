@@ -26,11 +26,11 @@ func death_sound():
 		sound_played2 = true
 
 func _physics_process(delta: float) -> void:
-	if silverLife >= 1500:
+	if silverLife >= 2000:
 		$AnimationPlayer.play("idle")
-	elif silverLife > 0 and silverLife < 1500:
+	elif silverLife > 0 and silverLife < 2000:
 		$AnimationPlayer.play("enraged")
-		speed = 200
+		speed = 230
 		maxSilver_Bullets = 4
 	else:
 		death_sound()
@@ -79,7 +79,7 @@ func _on_cooldown_timeout() -> void:
 		shootSequence()
 	
 func shootSequence():
-	if  bulletCount < maxSilver_Bullets:
+	if  bulletCount < maxSilver_Bullets and silverLife>0:
 		shoot()
 		$Attack.play()
 		bulletCount += 1
