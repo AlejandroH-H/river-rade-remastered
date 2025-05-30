@@ -1,9 +1,12 @@
-[gd_scene load_steps=14 format=3 uid="uid://bia656h0sjnan"]
+[gd_scene load_steps=17 format=3 uid="uid://bia656h0sjnan"]
 
 [ext_resource type="Script" uid="uid://blfxxut2subhy" path="res://Scripts/raiderMovement.gd" id="1_x0dcs"]
 [ext_resource type="Texture2D" uid="uid://c5nwod7as3gce" path="res://Textures/Planes/main_ship-spritesheet.png" id="2_njlli"]
+[ext_resource type="Script" uid="uid://bjasfchvbsmed" path="res://Scripts/HUD.gd" id="3_dkvu8"]
 [ext_resource type="Script" uid="uid://b4ksibp6ixjuj" path="res://Scripts/TimerBar.gd" id="3_njlli"]
+[ext_resource type="Texture2D" uid="uid://cja4hrl7ji5d5" path="res://Textures/Planes/main_ship-1.png" id="4_3cvpc"]
 [ext_resource type="AudioStream" uid="uid://c8gu7vmjyc1jq" path="res://assets/public/Music/Guns&Items/Retro-Missile-Launcher-01.mp3" id="4_f6kfu"]
+[ext_resource type="FontFile" uid="uid://blcl6ofmniva2" path="res://assets/public/PressStart2P-Regular.ttf" id="4_n52f7"]
 [ext_resource type="AudioStream" uid="uid://bsqlaf6hvvbot" path="res://assets/public/Music/Guns&Items/Retro-Explosion-Short-01.mp3" id="5_tjf25"]
 [ext_resource type="AudioStream" uid="uid://sc6t1wp1t3pj" path="res://assets/public/Music/Guns&Items/Retro-Explosion-Swoshes-04.mp3" id="6_7x1n0"]
 
@@ -102,7 +105,7 @@ _data = {
 }
 
 [node name="Raider" type="CharacterBody2D" groups=["Player"]]
-collision_layer = 3
+collision_mask = 4
 script = ExtResource("1_x0dcs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -127,25 +130,57 @@ zoom = Vector2(1.5, 1.5)
 [node name="SpawnPoint" type="Node2D" parent="."]
 position = Vector2(2.08189e-12, -47)
 
-[node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
-autostart = true
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("3_dkvu8")
 
-[node name="Line2D" type="Line2D" parent="."]
-position = Vector2(351, -71)
-points = PackedVector2Array(0, 0, 2.08189e-12, -100)
+[node name="LivesContainer" type="HBoxContainer" parent="HUD"]
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 81.0
+offset_bottom = -17.0
+
+[node name="Line2D" type="Line2D" parent="HUD/LivesContainer"]
+position = Vector2(145, -40)
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
+points = PackedVector2Array(0, 0, 4.90691e-06, -48, 2.08189e-12, -100)
 width = 20.0
 default_color = Color(0, 0, 0, 1)
 
-[node name="TimerBar" type="Line2D" parent="."]
-position = Vector2(351, -71)
+[node name="TimerBar" type="Line2D" parent="HUD/LivesContainer"]
+position = Vector2(145, -40)
+rotation = -1.5708
+scale = Vector2(1.5, 1.5)
 points = PackedVector2Array(0, 0, 0, -100)
 width = 20.0
 default_color = Color(0.839216, 0.0470588, 0.0784314, 1)
 script = ExtResource("3_njlli")
 
-[node name="Fuel" type="Timer" parent="TimerBar"]
+[node name="Fuel" type="Timer" parent="HUD/LivesContainer/TimerBar"]
 wait_time = 4.0
+autostart = true
+
+[node name="Life1" type="TextureRect" parent="HUD/LivesContainer"]
+layout_mode = 2
+texture = ExtResource("4_3cvpc")
+
+[node name="Life2" type="TextureRect" parent="HUD/LivesContainer"]
+layout_mode = 2
+texture = ExtResource("4_3cvpc")
+
+[node name="Life3" type="TextureRect" parent="HUD/LivesContainer"]
+layout_mode = 2
+texture = ExtResource("4_3cvpc")
+
+[node name="ScoreLabel" type="Label" parent="HUD/LivesContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_n52f7")
+text = "
+"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
 autostart = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -158,5 +193,5 @@ stream = ExtResource("5_tjf25")
 [node name="Death2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_7x1n0")
 
-[connection signal="time_to_die" from="TimerBar" to="." method="_on_timer_bar_time_to_die"]
-[connection signal="timeout" from="TimerBar/Fuel" to="TimerBar" method="_on_fuel_timeout"]
+[connection signal="time_to_die" from="HUD/LivesContainer/TimerBar" to="." method="_on_timer_bar_time_to_die"]
+[connection signal="timeout" from="HUD/LivesContainer/TimerBar/Fuel" to="HUD/LivesContainer/TimerBar" method="_on_fuel_timeout"]

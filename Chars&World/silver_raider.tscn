@@ -1,0 +1,214 @@
+[gd_scene load_steps=17 format=3 uid="uid://fejxdlhmutou"]
+
+[ext_resource type="Script" uid="uid://bq4awuum8yy0d" path="res://Scripts/silver_raider.gd" id="1_cwpbd"]
+[ext_resource type="Shader" uid="uid://ddqmkenf1h4k7" path="res://Chars&World/silver_raider.gdshader" id="2_p3t2s"]
+[ext_resource type="Texture2D" uid="uid://opaqc0l8pebu" path="res://Textures/Planes/Silver Fighter (2).png" id="3_p3t2s"]
+[ext_resource type="Script" uid="uid://bdjera6ic6kia" path="res://Scripts/hitbox.gd" id="3_w20d7"]
+[ext_resource type="AudioStream" uid="uid://0rky5xsi7l7p" path="res://assets/public/Music/Guns&Items/Retro-Explosion-Short-15.mp3" id="4_roljq"]
+[ext_resource type="AudioStream" uid="uid://sc6t1wp1t3pj" path="res://assets/public/Music/Guns&Items/Retro-Explosion-Swoshes-04.mp3" id="5_p3t2s"]
+[ext_resource type="AudioStream" uid="uid://c8gu7vmjyc1jq" path="res://assets/public/Music/Guns&Items/Retro-Missile-Launcher-01.mp3" id="6_8vvrc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8vvrc"]
+resource_local_to_scene = true
+shader = ExtResource("2_p3t2s")
+shader_parameter/hit_flash_color = Color(1, 0.976471, 1, 1)
+shader_parameter/hit_flash_on = false
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0q0uu"]
+size = Vector2(36, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7en0o"]
+size = Vector2(36, 34)
+
+[sub_resource type="Animation" id="Animation_0q0uu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("ShaderMaterial_8vvrc")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:material:shader_parameter/hit_flash_on")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_p3t2s"]
+resource_name = "hurt"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:material:shader_parameter/hit_flash_on")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_8vvrc"]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.53),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ywsvu"]
+resource_name = "Death"
+length = 1.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.633333, 0.9, 1.2, 1.43333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6]
+}
+
+[sub_resource type="Animation" id="Animation_6iay1"]
+resource_name = "enraged"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7en0o"]
+_data = {
+&"Death": SubResource("Animation_ywsvu"),
+&"RESET": SubResource("Animation_0q0uu"),
+&"enraged": SubResource("Animation_6iay1"),
+&"hurt": SubResource("Animation_p3t2s"),
+&"idle": SubResource("Animation_8vvrc")
+}
+
+[node name="Silver_Raider" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_cwpbd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+material = SubResource("ShaderMaterial_8vvrc")
+position = Vector2(2.08189e-12, 3)
+rotation = -3.14159
+texture = ExtResource("3_p3t2s")
+hframes = 3
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.49691e-07, -1)
+shape = SubResource("RectangleShape2D_0q0uu")
+
+[node name="RayCast2D_Right" type="RayCast2D" parent="."]
+position = Vector2(-21, -27)
+rotation = -1.5708
+
+[node name="RayCast2D_Left" type="RayCast2D" parent="."]
+position = Vector2(25, 27)
+rotation = 1.5708
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_w20d7")
+
+[node name="Hit" type="AudioStreamPlayer" parent="Area2D"]
+stream = ExtResource("4_roljq")
+
+[node name="Death" type="AudioStreamPlayer" parent="Area2D"]
+stream = ExtResource("5_p3t2s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.43039e-07, 7)
+shape = SubResource("RectangleShape2D_7en0o")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[node name="Cooldown" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="SpawnPoint" type="Node2D" parent="."]
+position = Vector2(-12, 35)
+
+[node name="SpawnPoint2" type="Node2D" parent="."]
+position = Vector2(12, 35)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_7en0o")
+}
+
+[node name="flash" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_7en0o")
+}
+
+[node name="Attack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_8vvrc")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]

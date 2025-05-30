@@ -1,0 +1,124 @@
+[gd_scene load_steps=10 format=3 uid="uid://diqeis8oc3ris"]
+
+[ext_resource type="Script" uid="uid://bomq8q8m8uff4" path="res://Scripts/game_over.gd" id="1_uylih"]
+[ext_resource type="Texture2D" uid="uid://b33behlqhf4ag" path="res://assets/public/gameover.jpg" id="2_3817r"]
+[ext_resource type="Texture2D" uid="uid://cja4hrl7ji5d5" path="res://Textures/Planes/main_ship-1.png" id="3_mitgx"]
+[ext_resource type="Texture2D" uid="uid://dprvohh7770yj" path="res://Textures/Planes/Silver Fighter.png" id="4_gs2es"]
+[ext_resource type="Texture2D" uid="uid://clum46qeg6l5a" path="res://Textures/Enemies/PNG/Helicopter/separated_frames/helicopter_1.png" id="5_asocn"]
+[ext_resource type="Texture2D" uid="uid://q7i6iq0mr760" path="res://Textures/Enemies/PNG/Boat1_water_animation_color2/Boat1_water_frame1.png" id="6_61f6c"]
+[ext_resource type="Texture2D" uid="uid://d3rcbfo7c5v0h" path="res://Textures/Planes/Explosion/explosion-3.png" id="7_xqply"]
+[ext_resource type="Texture2D" uid="uid://cbpx3h5xcqk6q" path="res://Textures/Planes/Space Ships Explosion.png" id="8_i8bap"]
+[ext_resource type="FontFile" uid="uid://bufbc818i1q4" path="res://assets/public/PressStart2P-Regular.ttf" id="9_e3ik1"]
+
+[node name="Game_Over" type="Node2D"]
+script = ExtResource("1_uylih")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.0
+offset_top = 2.0
+offset_right = 1277.0
+offset_bottom = 1282.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3817r")
+
+[node name="Fondo" type="Node2D" parent="."]
+position = Vector2(-100, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Fondo"]
+position = Vector2(336, 533)
+rotation = 0.872665
+scale = Vector2(2.36458, 2.16871)
+texture = ExtResource("3_mitgx")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Fondo"]
+texture_filter = 1
+position = Vector2(231.578, 310.052)
+rotation = -3.49066
+scale = Vector2(2.75473, 3.46772)
+texture = ExtResource("4_gs2es")
+hframes = 3
+vframes = 3
+
+[node name="Sprite2D3" type="Sprite2D" parent="Fondo"]
+texture_filter = 1
+position = Vector2(932, 560)
+scale = Vector2(1.69271, 2.4375)
+texture = ExtResource("5_asocn")
+flip_h = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="Fondo"]
+texture_filter = 1
+position = Vector2(920, 390)
+rotation = 1.22173
+scale = Vector2(1.31426, 1.99176)
+texture = ExtResource("6_61f6c")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Fondo"]
+position = Vector2(311.189, 508.573)
+rotation = 1.22173
+scale = Vector2(0.790826, 0.727413)
+texture = ExtResource("7_xqply")
+
+[node name="Sprite2D6" type="Sprite2D" parent="Fondo"]
+position = Vector2(365, 520)
+rotation = 1.22173
+scale = Vector2(0.790826, 0.727413)
+texture = ExtResource("7_xqply")
+
+[node name="Sprite2D7" type="Sprite2D" parent="Fondo"]
+position = Vector2(348, 571)
+rotation = 1.22173
+scale = Vector2(0.790826, 0.727413)
+texture = ExtResource("7_xqply")
+
+[node name="Sprite2D8" type="Sprite2D" parent="Fondo"]
+position = Vector2(319, 556)
+rotation = 1.22173
+scale = Vector2(0.790826, 0.727413)
+texture = ExtResource("8_i8bap")
+hframes = 7
+frame = 3
+
+[node name="Sprite2D9" type="Sprite2D" parent="Fondo"]
+position = Vector2(337, 534)
+rotation = 1.22173
+scale = Vector2(0.790826, 0.727413)
+texture = ExtResource("8_i8bap")
+hframes = 7
+frame = 3
+
+[node name="Label" type="Label" parent="."]
+offset_left = 385.0
+offset_top = 137.0
+offset_right = 785.0
+offset_bottom = 177.0
+theme_override_fonts/font = ExtResource("9_e3ik1")
+theme_override_font_sizes/font_size = 40
+text = "Game Over "
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 454.0
+offset_top = 300.0
+offset_right = 668.0
+offset_bottom = 380.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_e3ik1")
+theme_override_font_sizes/font_size = 30
+text = "Menú"
+
+[node name="Button2" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("9_e3ik1")
+theme_override_font_sizes/font_size = 30
+text = "Salir"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_button_2_pressed"]

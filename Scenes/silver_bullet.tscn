@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbwxmb8qqfjl5"]
+
+[ext_resource type="Script" uid="uid://n0umwjifwajb" path="res://Scripts/silver_bullet.gd" id="1_5jf5c"]
+[ext_resource type="Texture2D" uid="uid://quahnsof11j5" path="res://Textures/Planes/missile.png" id="2_wl3s5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dd540"]
+radius = 6.0
+height = 28.0
+
+[node name="Silver_Bullet" type="CharacterBody2D"]
+script = ExtResource("1_5jf5c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+shape = SubResource("CapsuleShape2D_dd540")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 5)
+rotation = -3.14159
+texture = ExtResource("2_wl3s5")
+hframes = 2
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

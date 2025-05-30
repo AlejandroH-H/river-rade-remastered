@@ -13,6 +13,12 @@ func _physics_process(delta):
 		var collider = collision.get_collider()
 		if collider:
 			if collider.is_in_group("Enemy"):
+				if collider.get_name()=="Enemy_Helicopter":
+					Global.player_score += 200
+				else:
+					Global.player_score += 100
+				#meti a todos los enemigos en el grupo enemy para detectar cuando la bala colisione con uno de ellos
+				collider.hitbox = true
 				#meti a todos los enemigos en el grupo enemy para detectar cuando la bala colisione con uno de ellos
 				collider.hitbox = true
 				#hitbox es una variable bool que le permite al juego determinar si debe morir el enemigo o no, accedo a ella mediante el collider ya que hitbox se encuentra en los scripts de enemigos
@@ -22,3 +28,7 @@ func _physics_process(delta):
 				queue_free()
 			else:
 				queue_free()
+
+
+func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
+	queue_free()

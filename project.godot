@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="River Rade (Remastered)"
-run/main_scene="uid://bxd5ql27gu2mg"
+run/main_scene="uid://cjnv4t16oh2fn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 

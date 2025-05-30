@@ -1,5 +1,5 @@
 extends AudioStreamPlayer
-
+var music = true
 #Script global para poder cargar la musica entre escenas
 const level_music = preload("res://assets/public/Music/Strike Force Heroes Music - Rose at Midnight.mp3")
 

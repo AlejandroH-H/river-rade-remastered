@@ -1026,7 +1026,7 @@ texture = ExtResource("2_vcxu1")
 34:27/0 = 0
 35:27/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vcxu1"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_etghj"]
 texture = ExtResource("1_5btaa")
 0:0/0 = 0
 1:0/0 = 0
@@ -1218,7 +1218,7 @@ texture = ExtResource("1_5btaa")
 4:12/size_in_atlas = Vector2i(3, 4)
 4:12/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bnqn6"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r38dg"]
 texture = ExtResource("4_mevgg")
 0:0/0 = 0
 1:0/0 = 0
@@ -2103,7 +2103,7 @@ texture = ExtResource("4_mevgg")
 19:41/0 = 0
 20:41/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_etghj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n5vb4"]
 texture = ExtResource("3_dosvc")
 0:0/0 = 0
 1:0/0 = 0
@@ -2122,7 +2122,7 @@ texture = ExtResource("3_dosvc")
 2:3/0 = 0
 3:3/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r38dg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bnqn6"]
 texture = ExtResource("4_vcxu1")
 0:0/0 = 0
 1:0/0 = 0
@@ -2242,7 +2242,7 @@ texture = ExtResource("4_vcxu1")
 2:18/0 = 0
 3:18/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n5vb4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1xem1"]
 texture = ExtResource("5_mevgg")
 texture_region_size = Vector2i(8, 8)
 0:0/0 = 0
@@ -2290,12 +2290,12 @@ texture_region_size = Vector2i(8, 8)
 
 [sub_resource type="TileSet" id="TileSet_mevgg"]
 physics_layer_0/collision_layer = 3
-sources/1 = SubResource("TileSetAtlasSource_vcxu1")
-sources/3 = SubResource("TileSetAtlasSource_etghj")
-sources/4 = SubResource("TileSetAtlasSource_r38dg")
-sources/5 = SubResource("TileSetAtlasSource_n5vb4")
+sources/1 = SubResource("TileSetAtlasSource_etghj")
+sources/3 = SubResource("TileSetAtlasSource_n5vb4")
+sources/4 = SubResource("TileSetAtlasSource_bnqn6")
+sources/5 = SubResource("TileSetAtlasSource_1xem1")
 sources/0 = SubResource("TileSetAtlasSource_mevgg")
-sources/2 = SubResource("TileSetAtlasSource_bnqn6")
+sources/2 = SubResource("TileSetAtlasSource_r38dg")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dcc1w"]
 size = Vector2(511.5, 61.75)
@@ -2320,7 +2320,7 @@ position = Vector2(5, -463)
 
 [node name="Exit" type="Area2D" parent="."]
 script = ExtResource("7_dcc1w")
-next_scene_path = "res://Chars&World/Level.tscn"
+next_scene_path = "res://Chars&World/boss_fight.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit"]
 position = Vector2(-2.75, -1448.88)
