@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bia656h0sjnan"]
+[gd_scene load_steps=18 format=3 uid="uid://bia656h0sjnan"]
 
 [ext_resource type="Script" uid="uid://blfxxut2subhy" path="res://Scripts/raiderMovement.gd" id="1_x0dcs"]
 [ext_resource type="Texture2D" uid="uid://c5nwod7as3gce" path="res://Textures/Planes/main_ship-spritesheet.png" id="2_njlli"]
@@ -11,7 +11,10 @@
 [ext_resource type="AudioStream" uid="uid://sc6t1wp1t3pj" path="res://assets/public/Music/Guns&Items/Retro-Explosion-Swoshes-04.mp3" id="6_7x1n0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0dcs"]
-size = Vector2(17, 37)
+size = Vector2(20.5, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ma65o"]
+size = Vector2(23.375, 37)
 
 [sub_resource type="Animation" id="Animation_dkvu8"]
 resource_name = "Death"
@@ -105,7 +108,7 @@ _data = {
 }
 
 [node name="Raider" type="CharacterBody2D" groups=["Player"]]
-collision_mask = 4
+collision_mask = 5
 script = ExtResource("1_x0dcs")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -115,8 +118,14 @@ hframes = 5
 vframes = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -4)
+position = Vector2(0, -3)
 shape = SubResource("RectangleShape2D_x0dcs")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1, -2)
+shape = SubResource("RectangleShape2D_ma65o")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -193,5 +202,7 @@ stream = ExtResource("5_tjf25")
 [node name="Death2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_7x1n0")
 
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="time_to_die" from="HUD/LivesContainer/TimerBar" to="." method="_on_timer_bar_time_to_die"]
 [connection signal="timeout" from="HUD/LivesContainer/TimerBar/Fuel" to="HUD/LivesContainer/TimerBar" method="_on_fuel_timeout"]

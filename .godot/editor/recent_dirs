@@ -1,10 +1,10 @@
-res://Textures/Planes
-res://Scripts
-res://Chars&World
 res://Scenes
+res://Scripts
+res://assets/public/Music
+res://Chars&World
+res://Textures/Planes
 res://
 res://assets/public/Music/Guns&Items
-res://assets/public/Music
 res://Textures/Enemies/PNG/Boat1_water_animation_color2
 res://Textures/Enemies/PNG/Helicopter
 res://Textures/partsOfTheMap/Props

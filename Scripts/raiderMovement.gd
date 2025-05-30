@@ -36,17 +36,12 @@ func death_sound2():
 
 func _physics_process(delta: float) -> void:
 	
-	
-
-	
 	for i in range(get_slide_collision_count()):
 		var collision = get_slide_collision(i)
-
 		if collision.get_collider() is TileMapLayer:
 			var tilemap = collision.get_collider()
 			var tile_coords = tilemap.local_to_map(collision.get_position())
 			var tile_id = tilemap.get_cell_source_id(tile_coords)
-
 			if tile_id in WALL_TILE_IDS:
 				print("Colisión con pared detectada (tile ID:", tile_id, ")")
 				die()
@@ -189,3 +184,8 @@ func die():
 		#print("test")
 #Todo hasta acá fueron intentos fallidos, pero el timer parece prometedor, aunque me gustaría
 #lograr la conexión
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("DangerTiles"):
+		die()

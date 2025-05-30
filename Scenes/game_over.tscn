@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=3 uid="uid://diqeis8oc3ris"]
 
-[ext_resource type="Script" uid="uid://bomq8q8m8uff4" path="res://Scripts/game_over.gd" id="1_uylih"]
-[ext_resource type="Texture2D" uid="uid://b33behlqhf4ag" path="res://assets/public/gameover.jpg" id="2_3817r"]
+[ext_resource type="Script" uid="uid://cco4pxetf67nw" path="res://Scripts/game_over.gd" id="1_uylih"]
+[ext_resource type="Texture2D" uid="uid://cjyk3verg676v" path="res://assets/public/gameover.jpg" id="2_3817r"]
 [ext_resource type="Texture2D" uid="uid://cja4hrl7ji5d5" path="res://Textures/Planes/main_ship-1.png" id="3_mitgx"]
-[ext_resource type="Texture2D" uid="uid://dprvohh7770yj" path="res://Textures/Planes/Silver Fighter.png" id="4_gs2es"]
+[ext_resource type="Texture2D" uid="uid://ji7dypyd8lnb" path="res://Textures/Planes/Silver Fighter.png" id="4_gs2es"]
 [ext_resource type="Texture2D" uid="uid://clum46qeg6l5a" path="res://Textures/Enemies/PNG/Helicopter/separated_frames/helicopter_1.png" id="5_asocn"]
 [ext_resource type="Texture2D" uid="uid://q7i6iq0mr760" path="res://Textures/Enemies/PNG/Boat1_water_animation_color2/Boat1_water_frame1.png" id="6_61f6c"]
 [ext_resource type="Texture2D" uid="uid://d3rcbfo7c5v0h" path="res://Textures/Planes/Explosion/explosion-3.png" id="7_xqply"]
 [ext_resource type="Texture2D" uid="uid://cbpx3h5xcqk6q" path="res://Textures/Planes/Space Ships Explosion.png" id="8_i8bap"]
-[ext_resource type="FontFile" uid="uid://bufbc818i1q4" path="res://assets/public/PressStart2P-Regular.ttf" id="9_e3ik1"]
+[ext_resource type="FontFile" uid="uid://blcl6ofmniva2" path="res://assets/public/PressStart2P-Regular.ttf" id="9_e3ik1"]
 
 [node name="Game_Over" type="Node2D"]
 script = ExtResource("1_uylih")

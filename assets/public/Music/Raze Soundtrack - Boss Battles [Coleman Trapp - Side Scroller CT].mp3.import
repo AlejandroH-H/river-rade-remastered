@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bdcr38an2x3eq"
+path="res://.godot/imported/Raze Soundtrack - Boss Battles [Coleman Trapp - Side Scroller CT].mp3-fa41a8e1034dc398b1782ab343be9762.mp3str"
+
+[deps]
+
+source_file="res://assets/public/Music/Raze Soundtrack - Boss Battles [Coleman Trapp - Side Scroller CT].mp3"
+dest_files=["res://.godot/imported/Raze Soundtrack - Boss Battles [Coleman Trapp - Side Scroller CT].mp3-fa41a8e1034dc398b1782ab343be9762.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
