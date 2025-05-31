@@ -13,7 +13,7 @@ var hitbox = false
 var sound_played = false
 var sound_played2 = false
 var scene_name
-const WALL_TILE_IDS = [1]
+const WALL_TILE_IDS = [0]
 
 func _ready():
 	scene_name = get_tree().current_scene.name

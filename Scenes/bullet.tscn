@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://8ltxt1xnsuhi"]
+[gd_scene load_steps=5 format=3 uid="uid://8ltxt1xnsuhi"]
 
 [ext_resource type="Script" uid="uid://da12l4lcqcrfl" path="res://Scripts/bullet.gd" id="1_oduel"]
 [ext_resource type="Texture2D" uid="uid://w3c713qqyptc" path="res://Textures/Planes/Explosion/explosion-5.png" id="1_xjght"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ycag2"]
+radius = 8.23545
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oduel"]
 radius = 5.09902
@@ -11,6 +14,14 @@ position = Vector2(-2, -30)
 collision_layer = 2
 collision_mask = 4
 script = ExtResource("1_oduel")
+
+[node name="HitBoxArea" type="Area2D" parent="."]
+scale = Vector2(0.748263, 0.532622)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxArea"]
+position = Vector2(0, -1.87751)
+scale = Vector2(0.67269, 1.26706)
+shape = SubResource("CircleShape2D_ycag2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -1)

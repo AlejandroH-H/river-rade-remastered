@@ -1,8 +1,9 @@
+CollisionShape2D
+Area2D
+StaticBody2D
 AudioStreamPlayer
 AudioStreamPlayer2D
 Node2D
-CollisionShape2D
-Area2D
 VisibleOnScreenNotifier2D
 CharacterBody2D
 Line2D
@@ -11,4 +12,3 @@ TileMapLayer
 TileMap
 Sprite2D
 AnimationPlayer
-RayCast2D

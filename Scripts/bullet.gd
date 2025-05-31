@@ -3,6 +3,14 @@ extends CharacterBody2D
 var direction: float = 0.0
 var speed: float = 300.0 #Podríamos probar la velocidad en el futuro para ver cual es más adaptable
 
+func _ready():
+	add_to_group("projectiles")
+	$HitBoxArea.connect("area_entered", Callable(self, "_on_area_entered"))
+
+func _on_area_entered(area):
+	if area.name == "bridge" or area.is_in_group("proyectiles"):
+		queue_free()
+
 func _physics_process(delta):
 	#velocity = Vector2.UP * speed
 	#move_and_slide()
