@@ -24,11 +24,18 @@ func _on_area_entered(area):
 		return
 	if area.is_in_group("projectiles") or area.get_parent().is_in_group("projectiles"):
 		print("💥 ¡Bala impactó el puente!")  
-		replace_bridge_with_water()
 		destroyed = true
 		area.queue_free()
+		replace_bridge_with_water()
+		#$Explosion.play()
+		#$Explosion.connect("finished", _on_audio_finished)
+		
+		
+#func _on_audio_finished():
+	#replace_bridge_with_water()
 
 func replace_bridge_with_water(): 
+	$Explosion.play()
 	var used_rect = tilemap.get_used_rect() # Obtener límites del TileMap 
 	for x in range(used_rect.position.x, used_rect.end.x): 
 		for y in range(used_rect.position.y, used_rect.end.y): 
@@ -37,7 +44,7 @@ func replace_bridge_with_water():
 				var tile_id = tilemap.get_cell_source_id(cell) 
 				if tile_id in bridge_tile_ids: 
 					tilemap.set_cell(cell, water_tile_id) # Matenme
-					print("✅ Celda reemplazada por agua en:", cell) 
+					#print("✅ Celda reemplazada por agua en:", cell) 
 				else:
 					print("⚠️ Celda fuera de los límites, no se modifica:", cell) 
 	tilemap.queue_redraw()

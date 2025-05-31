@@ -8,7 +8,7 @@ func _ready():
 	$HitBoxArea.connect("area_entered", Callable(self, "_on_area_entered"))
 
 func _on_area_entered(area):
-	if area.name == "bridge" or area.is_in_group("proyectiles"):
+	if area.name == "bridge" or area.is_in_group("projectiles"):
 		queue_free()
 
 func _physics_process(delta):
@@ -31,7 +31,6 @@ func _physics_process(delta):
 				collider.hitbox = true
 				#hitbox es una variable bool que le permite al juego determinar si debe morir el enemigo o no, accedo a ella mediante el collider ya que hitbox se encuentra en los scripts de enemigos
 			if collider.is_in_group("Items"):
-				print(collider.get_name())
 				collider.queue_free()
 				queue_free()
 			else:

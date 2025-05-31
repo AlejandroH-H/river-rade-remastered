@@ -12,6 +12,7 @@ var is_dead = false
 var hitbox = false
 var sound_played = false
 var sound_played2 = false
+var turbo = false
 var scene_name
 const WALL_TILE_IDS = [0]
 
@@ -33,6 +34,10 @@ func death_sound2():
 	if not sound_played:
 		$Death2.play()
 		sound_played2 = true
+func _turbo():
+	if not turbo:
+		$turbo.play()
+		turbo = true
 
 func _physics_process(delta: float) -> void:
 	
@@ -71,7 +76,9 @@ func _physics_process(delta: float) -> void:
 				if scene_name == "Boss_Fight":
 					velocity.y = 0
 				else:
+					_turbo()
 					velocity.y = -TURBO
+			
 				
 			elif Input.is_action_pressed("ia_down"):
 				if scene_name == "Boss_Fight":
@@ -88,6 +95,9 @@ func _physics_process(delta: float) -> void:
 			else: 
 				velocity.x = 0
 				$AnimationPlayer.play("Idle")
+			if Input.is_action_just_released("ia_up"):
+				turbo = false
+				$turbo.stop()
 	
 	
 	move_and_slide()
