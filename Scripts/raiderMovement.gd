@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 50.0
+const SPEED = 80.0
 const TILT_SPEED = 150.0
 const TURBO = SPEED * 2
 

@@ -70,7 +70,6 @@ func spawn_enemy():
 			break
 
 		attempts += 1
-		print("Intento de spawn inválido, reintentando...")
 
 	if !spawned:
 		print("No se pudo spawnear el enemigo tras 10 intentos.")

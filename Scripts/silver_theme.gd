@@ -9,7 +9,7 @@ func _ready():
 		level_music.loop = true
 
 
-func _play_music(music: AudioStream, volume = -8.0):
+func _play_music(music: AudioStream, volume = 0.0):
 	if stream == music:
 		return
 	

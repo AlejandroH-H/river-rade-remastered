@@ -14,16 +14,13 @@ func _on_body_entered(body):
 	if destroyed:
 		return
 	if body.name == "Raider":
-		print("🚨 El jugador chocó con el puente, ¡muere!")  
 		body.die()  # Método de muerte del jugador
 		queue_free()
 
 func _on_area_entered(area):
-	print("⚡ Área impactada por:", area.name)
 	if destroyed:
 		return
-	if area.is_in_group("projectiles") or area.get_parent().is_in_group("projectiles"):
-		print("💥 ¡Bala impactó el puente!")  
+	if area.is_in_group("projectiles") or area.get_parent().is_in_group("projectiles"): 
 		destroyed = true
 		area.queue_free()
 		replace_bridge_with_water()

@@ -106,12 +106,12 @@ volume_db = 5.0
 pitch_scale = 1.01
 
 [node name="RayCast2D_Left" type="RayCast2D" parent="."]
-position = Vector2(28, 22)
+position = Vector2(-8, -3)
 rotation = -6.28331
-target_position = Vector2(-78, -0.0100555)
+target_position = Vector2(-44, -0.00548553)
 
 [node name="RayCast2D_Right" type="RayCast2D" parent="."]
-position = Vector2(-43, -17)
-target_position = Vector2(79, 0)
+position = Vector2(3, -4)
+target_position = Vector2(34, 0)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
