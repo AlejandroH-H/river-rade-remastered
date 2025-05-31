@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bia656h0sjnan"]
+[gd_scene load_steps=23 format=3 uid="uid://bia656h0sjnan"]
 
 [ext_resource type="Script" uid="uid://blfxxut2subhy" path="res://Scripts/raiderMovement.gd" id="1_x0dcs"]
 [ext_resource type="Texture2D" uid="uid://c5nwod7as3gce" path="res://Textures/Planes/main_ship-spritesheet.png" id="2_njlli"]
@@ -6,9 +6,14 @@
 [ext_resource type="Script" uid="uid://b4ksibp6ixjuj" path="res://Scripts/TimerBar.gd" id="3_njlli"]
 [ext_resource type="Texture2D" uid="uid://cja4hrl7ji5d5" path="res://Textures/Planes/main_ship-1.png" id="4_3cvpc"]
 [ext_resource type="AudioStream" uid="uid://c8gu7vmjyc1jq" path="res://assets/public/Music/Guns&Items/Retro-Missile-Launcher-01.mp3" id="4_f6kfu"]
+[ext_resource type="Texture2D" uid="uid://da7rrg34x6mvi" path="res://assets/public/hud3.jpg" id="4_ma65o"]
 [ext_resource type="FontFile" uid="uid://blcl6ofmniva2" path="res://assets/public/PressStart2P-Regular.ttf" id="4_n52f7"]
+[ext_resource type="Texture2D" uid="uid://b8v1yc2clfr5k" path="res://assets/public/hud4.jpg" id="5_lolvg"]
 [ext_resource type="AudioStream" uid="uid://bsqlaf6hvvbot" path="res://assets/public/Music/Guns&Items/Retro-Explosion-Short-01.mp3" id="5_tjf25"]
+[ext_resource type="Texture2D" uid="uid://c3o2f2g5dbjsl" path="res://assets/public/hud1.png" id="6_6cgme"]
 [ext_resource type="AudioStream" uid="uid://sc6t1wp1t3pj" path="res://assets/public/Music/Guns&Items/Retro-Explosion-Swoshes-04.mp3" id="6_7x1n0"]
+[ext_resource type="Texture2D" uid="uid://dxy53fxeje554" path="res://Textures/partsOfTheMap/Props/gas-tank.png" id="7_v1qcm"]
+[ext_resource type="AudioStream" uid="uid://1ak172cy2ijc" path="res://assets/public/Music/Guns&Items/turbo.mp3" id="14_v1qcm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0dcs"]
 size = Vector2(20.5, 37)
@@ -142,6 +147,47 @@ position = Vector2(2.08189e-12, -47)
 [node name="HUD" type="CanvasLayer" parent="."]
 script = ExtResource("3_dkvu8")
 
+[node name="TextureRect" type="TextureRect" parent="HUD"]
+z_index = -1
+texture_filter = 1
+offset_left = -9.0
+offset_top = 497.0
+offset_right = 1153.0
+offset_bottom = 657.0
+texture = ExtResource("4_ma65o")
+
+[node name="TextureRect2" type="TextureRect" parent="HUD"]
+z_index = -1
+texture_filter = 1
+offset_left = 735.0
+offset_top = 497.0
+offset_right = 1093.0
+offset_bottom = 640.0
+texture = ExtResource("5_lolvg")
+flip_h = true
+
+[node name="TextureRect3" type="TextureRect" parent="HUD"]
+z_index = -1
+texture_filter = 1
+offset_left = 1.0
+offset_top = 496.0
+offset_right = 199.0
+offset_bottom = 648.0
+texture = ExtResource("6_6cgme")
+expand_mode = 1
+flip_h = true
+
+[node name="TextureRect4" type="TextureRect" parent="HUD"]
+z_index = -1
+texture_filter = 1
+offset_left = 401.0
+offset_top = 503.0
+offset_right = 440.0
+offset_bottom = 552.0
+texture = ExtResource("7_v1qcm")
+expand_mode = 1
+flip_h = true
+
 [node name="LivesContainer" type="HBoxContainer" parent="HUD"]
 offset_left = -75.0
 offset_top = -75.0
@@ -201,6 +247,9 @@ stream = ExtResource("5_tjf25")
 
 [node name="Death2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_7x1n0")
+
+[node name="turbo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_v1qcm")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

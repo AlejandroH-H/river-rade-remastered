@@ -15,7 +15,6 @@ func _ready():
 	perola.anchor_right = 0.5
 	perola.anchor_top = 1
 	perola.anchor_bottom = 1
-	#perola.margin_top = -50
 
 func update_lives(lives):
 	for i in range(max_lives):
